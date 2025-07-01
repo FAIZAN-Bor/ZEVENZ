@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Zenvenz Solutions | Get in Touch for Your Next Project</title>
+    <title>Contact Us - Zevenz Solutions | Get in Touch for Your Next Project</title>
     <meta name="description"
-        content="Contact Zenvenz Solutions for your technology needs. Get a free consultation, discuss your project, or request a quote. Multiple ways to reach us.">
+        content="Contact Zevenz Solutions for your technology needs. Get a free consultation, discuss your project, or request a quote. Multiple ways to reach us.">
     <meta name="keywords"
-        content="contact zenvenz, get quote, free consultation, tech support, project inquiry, contact form">
+        content="contact zevenz, get quote, free consultation, tech support, project inquiry, contact form">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,7 +52,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="../index.html" class="text-2xl font-bold text-primary">Zenvenz</a>
+                    <a href="../index.html" class="text-2xl font-bold text-primary">Zevenz</a>
                 </div>
 
                 <!-- Desktop Menu -->
@@ -100,13 +100,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-16 bg-gradient-to-br from-primary to-secondary text-white py-20">
+    <section class="pt-28 bg-gradient-to-br from-primary to-secondary text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center" data-aos="fade-up">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
                 <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
                     Ready to transform your ideas into reality? Let's discuss your project and explore
-                    how Zenvenz can help you achieve your technology goals.
+                    how Zevenz can help you achieve your technology goals.
                 </p>
             </div>
         </div>
@@ -131,130 +131,129 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                 <!-- Contact Form -->
-                <form id="contactForm" action="https://formspree.io/f/xeoknwja" method="POST" class="space-y-6">
+                <!-- <form id="contactForm" action="https://formspree.io/f/xeoknwja" method="POST" class="space-y-6"> -->
 
-                    <div data-aos="fade-right">
-                        <div class="bg-light p-8 rounded-xl shadow-lg">
-                            <h3 class="text-2xl font-bold text-dark mb-6">Send Us a Message</h3>
-                            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-                                class="space-y-6">
-                                <!-- Name Field -->
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Full Name *
-                                    </label>
-                                    <input type="text" id="name" name="name" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                        placeholder="Your full name">
-                                </div>
+                <div data-aos="fade-right">
+                    <div class="bg-light p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-dark mb-6">Send Us a Message</h3>
+                        <form id="contactForm" action="https://formspree.io/f/xeoknwja" method="POST" class="space-y-8">
+                            <!-- Name Field -->
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Full Name *
+                                </label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
+                                    placeholder="Your full name">
+                            </div>
 
-                                <!-- Email Field -->
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Email Address *
-                                    </label>
-                                    <input type="email" id="email" name="email" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                        placeholder="your.email@example.com">
-                                </div>
+                            <!-- Email Field -->
+                            <div class="mb-6"> 
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Email Address *
+                                </label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
+                                    placeholder="your.email@example.com">
+                            </div>
 
-                                <!-- Phone Field -->
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Phone Number (Optional)
-                                    </label>
-                                    <input type="tel" id="phone" name="phone"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                        placeholder="+1 (555) 123-4567">
-                                </div>
+                            <!-- Phone Field -->
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Phone Number (Optional)
+                                </label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
+                                    placeholder="+1 (555) 123-4567">
+                            </div>
 
-                                <!-- Company Field -->
-                                <div>
-                                    <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Company Name (Optional)
-                                    </label>
-                                    <input type="text" id="company" name="company"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                        placeholder="Your company name">
-                                </div>
+                            <!-- Company Field -->
+                            <div class="mb-6">
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Company Name (Optional)
+                                </label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
+                                    placeholder="Your company name">
+                            </div>
 
-                                <!-- Service Interest -->
-                                <div>
-                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Service Interest
-                                    </label>
-                                    <select id="service" name="service"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
-                                        <option value="">Select a service</option>
-                                        <option value="web-development">Web Development</option>
-                                        <option value="mobile-apps">Mobile App Development</option>
-                                        <option value="data-science">Data Science Solutions</option>
-                                        <option value="video-editing">Video Editing Services</option>
-                                        <option value="desktop-apps">Desktop Applications</option>
-                                        <option value="trading-bots">Trading Bot Development</option>
-                                        <option value="consultation">General Consultation</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
+                            <!-- Service Interest -->
+                            <div class="mb-6">
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Service Interest
+                                </label>
+                                <select id="service" name="service"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
+                                    <option value="">Select a service</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-apps">Mobile App Development</option>
+                                    <option value="data-science">Data Science Solutions</option>
+                                    <option value="video-editing">Video Editing Services</option>
+                                    <option value="desktop-apps">Desktop Applications</option>
+                                    <option value="trading-bots">Trading Bot Development</option>
+                                    <option value="consultation">General Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
 
-                                <!-- Budget Range -->
-                                <div>
-                                    <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Project Budget Range
-                                    </label>
-                                    <select id="budget" name="budget"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
-                                        <option value="">Select budget range</option>
-                                        <option value="under-5k">Under $5,000</option>
-                                        <option value="5k-10k">$5,000 - $10,000</option>
-                                        <option value="10k-25k">$10,000 - $25,000</option>
-                                        <option value="25k-50k">$25,000 - $50,000</option>
-                                        <option value="50k-plus">$50,000+</option>
-                                        <option value="discuss">Let's discuss</option>
-                                    </select>
-                                </div>
+                            <!-- Budget Range -->
+                            <div class="mb-6">
+                                <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Project Budget Range
+                                </label>
+                                <select id="budget" name="budget"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k-plus">$50,000+</option>
+                                    <option value="discuss">Let's discuss</option>
+                                </select>
+                            </div>
 
-                                <!-- Message Field -->
-                                <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Project Details *
-                                    </label>
-                                    <textarea id="message" name="message" rows="5" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300 resize-vertical"
-                                        placeholder="Tell us about your project, requirements, timeline, and any specific questions you have..."></textarea>
-                                </div>
+                            <!-- Message Field -->
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Project Details *
+                                </label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300 resize-vertical"
+                                    placeholder="Tell us about your project, requirements, timeline, and any specific questions you have..."></textarea>
+                            </div>
 
-                                <!-- Timeline -->
-                                <div>
-                                    <label for="timeline" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Project Timeline
-                                    </label>
-                                    <select id="timeline" name="timeline"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
-                                        <option value="">Select timeline</option>
-                                        <option value="asap">ASAP</option>
-                                        <option value="1-month">Within 1 month</option>
-                                        <option value="2-3-months">2-3 months</option>
-                                        <option value="6-months">Within 6 months</option>
-                                        <option value="flexible">Flexible</option>
-                                    </select>
-                                </div>
+                            <!-- Timeline -->
+                            <div class="mb-6">
+                                <label for="timeline" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Project Timeline
+                                </label>
+                                <select id="timeline" name="timeline"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="2-3-months">2-3 months</option>
+                                    <option value="6-months">Within 6 months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
 
-                                <!-- Submit Button -->
-                                <div>
-                                    <button type="submit"
-                                        class="w-full bg-primary text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-secondary transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                        <i class="fas fa-paper-plane mr-2"></i>
-                                        Send Message
-                                    </button>
-                                </div>
+                            <!-- Submit Button -->
+                            <div class="mb-6">
+                                <button type="submit"
+                                    class="w-full bg-primary text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-secondary transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Send Message
+                                </button>
+                            </div>
 
-                                <!-- Form Status Messages -->
-                                <div id="form-status" class="hidden"></div>
-                            </form>
-                        </div>
+                            <!-- Form Status Messages -->
+                            <div id="form-status" class="hidden"></div>
+                        </form>
                     </div>
-                </form>
+                </div>
+                <!-- </form> -->
 
                 <!-- Contact Information -->
                 <div data-aos="fade-left">
@@ -562,7 +561,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">Zenvenz Solutions</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Zevenz Solutions</h3>
                     <p class="text-gray-300 mb-4 max-w-md">
                         Leading the digital transformation with innovative web development, mobile apps,
                         data science, and cutting-edge technology solutions.
@@ -670,7 +669,7 @@
 
                     if (response.ok) {
                         status.className = 'mt-4 text-green-600';
-                        status.textContent = '✅ Thank you! Your message has been sent.';
+                        // status.textContent = '✅ Thank you! Your message has been sent.';
                         form.reset();
                     } else {
                         const data = await response.json();
