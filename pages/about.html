@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Zevenz Solutions | Our Story, Mission & Team</title>
+    <meta name="description"
+        content="Learn about Zevenz Solutions - our mission, vision, team, and journey in delivering innovative technology solutions. Meet the experts behind your success.">
+    <meta name="keywords"
+        content="about zevenz, company mission, tech team, company story, vision, values, technology experts">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1b2b4f',
+                        secondary: '#2d4064',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-primary">Zevenz</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html"
+                            class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition duration-300">Home</a>
+                        <a href="services.html"
+                            class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition duration-300">Services</a>
+                        <a href="portfolio.html"
+                            class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition duration-300">Portfolio</a>
+                        <a href="about.html"
+                            class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">About</a>
+                        <a href="contact.html"
+                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-secondary transition duration-300">Contact
+                            Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Home</a>
+                <a href="services.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Services</a>
+                <a href="portfolio.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Portfolio</a>
+                <a href="about.html"
+                    class="block text-primary border-l-4 border-primary bg-blue-50 px-3 py-2 text-base font-medium">About</a>
+                <a href="contact.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">About Zevenz</h1>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                    Driven by innovation, guided by excellence. Discover the story behind Zevenz Solutions
+                    and the passionate team that makes digital transformation possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Mission & Vision -->
+    <section class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="text-primary text-6xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and
+                        innovation.
+                        We believe that every business deserves access to world-class digital tools and expert guidance
+                        to thrive in the digital age.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-dark">Innovation First</h4>
+                                <p class="text-gray-600">We stay ahead of technology trends to provide cutting-edge
+                                    solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-dark">Client Success</h4>
+                                <p class="text-gray-600">Your success is our success - we're committed to delivering
+                                    results</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-dark">Quality Excellence</h4>
+                                <p class="text-gray-600">We maintain the highest standards in every project we undertake
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-primary text-6xl mb-6">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Our Vision</h3>
+                        <p class="text-gray-600 mb-6">
+                            To be the leading technology partner for businesses worldwide, known for transforming ideas
+                            into powerful digital solutions that create lasting value and drive meaningful change.
+                        </p>
+                        <div class="bg-light p-6 rounded-lg">
+                            <h4 class="font-semibold text-dark mb-3">Core Values</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-heart text-red-500 mr-2"></i>Integrity & Transparency</li>
+                                <li><i class="fas fa-users text-blue-500 mr-2"></i>Collaboration & Teamwork</li>
+                                <li><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Innovation & Creativity</li>
+                                <li><i class="fas fa-trophy text-green-500 mr-2"></i>Excellence & Quality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Story</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From humble beginnings to industry leaders - the journey of Zevenz Solutions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-primary to-secondary text-white p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4">Founded with Purpose</h3>
+                        <p class="text-blue-100 mb-6">
+                            Zevenz Solutions emerged from a vision conceived in 2022, when our founding team identified
+                            critical gaps between emerging technologies and business implementation needs. In 2023, we
+                            formally established the company with a clear strategic mission: to bridge this divide by
+                            delivering enterprise-grade technology solutions accessible to organizations regardless of
+                            size or sector.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-accent">2023</div>
+                                <div class="text-sm text-blue-100">Founded</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-accent">2+</div>
+                                <div class="text-sm text-blue-100">Years of Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Growing Through Innovation</h3>
+                    <p class="text-gray-600 mb-6">
+                        What started as a conceptual vision has rapidly evolved into a comprehensive technology
+                        solutions company.
+                        We've established expertise across multiple domains while maintaining our core commitment to
+                        quality and innovation.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-primary rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-dark">2022</h4>
+                                <p class="text-gray-600">Initial concept developed with focus on web solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-primary rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-dark">2023</h4>
+                                <p class="text-gray-600">Company officially founded with core web development services
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-primary rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-dark">2023</h4>
+                                <p class="text-gray-600">Expanded into mobile app development and data science</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-primary rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-dark">2024</h4>
+                                <p class="text-gray-600">Added AI solutions and video editing services</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-accent rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-dark">2024-2025</h4>
+                                <p class="text-gray-600">Expansion into trading bot development and emerging
+                                    technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Meet Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    The talented professionals behind TechCorp's success
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <div class="w-40 h-40 bg-white rounded-full flex items-center justify-center">
+                                <img src="../images-assets/hassan.jpg" alt="Hassan Raza"
+                                    class="w-full h-full object-cover object-center rounded-full">
+                            </div>
+                            <!-- <i class="fas fa-user text-primary text-6xl"></i> -->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Hassan Raza</h3>
+                        <p class="text-primary font-semibold mb-3">CEO</p>
+                        <p class="text-gray-600 mb-4">
+                            A visionary leader and expert mobile app developer, Hassan drives the company forward with
+                            strategic insights and cutting-edge app solutions.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+                        <div class="w-58 h-48 bg-white rounded-full flex items-center justify-center">
+                            <img src="../images-assets/faizan.jpg" alt="Faizan"
+                                class="w-full h-full object-cover object-center rounded-full">
+                            <!-- <i class="fas fa-user text-green-500 text-6xl"></i> -->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Faizan</h3>
+                        <p class="text-primary font-semibold mb-3">CTO & Co-Founder</p>
+                        <p class="text-gray-600 mb-4">
+                            Tech mastermind and co-founder, Faizan oversees all technical aspects of the company. He
+                            leads backend and frontend development using the powerful MERN stack.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://www.linkedin.com/in/m-faizan-503598264"
+                                class="text-gray-400 hover:text-primary transition duration-300" target="_blank">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="https://github.com/FAIZAN-Bor"
+                                class="text-gray-400 hover:text-primary transition duration-300" target="_blank">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <div class="w-58 h-48 bg-white rounded-full flex items-center justify-center">
+                            <img src="../images-assets/saif.jpg" alt="Saif"
+                                class="w-full h-full object-cover object-center rounded-full">
+                            <!-- <i class="fas fa-user text-purple-500 text-6xl"></i> -->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Saif</h3>
+                        <p class="text-primary font-semibold mb-3">Founder & Lead Data Scientist</p>
+                        <p class="text-gray-600 mb-4">
+                            With a unique blend of creativity and analytics, Saif brings visual storytelling to life
+                            while unlocking insights through data science
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-64 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                        <div class="w-58 h-48 bg-white rounded-full flex items-center justify-center">
+                            <img src="../images-assets/usman.jpg" alt="Usman"
+                                class="w-full h-full object-cover object-center rounded-full">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Usman</h3>
+                        <p class="text-primary font-semibold mb-3">Trading Systems & Bots Architect</p>
+                        <p class="text-gray-600 mb-4">
+                            The brains behind our trading automation, Usman designs and builds intelligent trading bots
+                            and systems to maximize performance.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-64 bg-gradient-to-br from-teal-500 to-blue-600 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-teal-500 text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Ibrahim</h3>
+                        <p class="text-primary font-semibold mb-3">Social Media Handler & Graphic Designer</p>
+                        <p class="text-gray-600 mb-4">
+                            Video editing and creative design expert. Brings visual stories to life with stunning
+                            creativity.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <div class="w-85 h-48 bg-white rounded-full flex items-center justify-center">
+                                <img src="../images-assets/ahtesham.jpg" alt="Ahtesham"
+                                    class="w-full h-full object-cover object-center rounded-full">
+                            </div>
+                            <!-- <i class="fas fa-user text-indigo-500 text-6xl"></i> -->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Ahtesham</h3>
+                        <p class="text-primary font-semibold mb-3">Graphic Designer & Video Editor</p>
+                        <p class="text-gray-600 mb-4">
+                            A creative powerhouse who turns ideas into visually stunning content, whether it’s branding
+                            assets or polished video edits.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="700">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-500 text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Farhan</h3>
+                        <p class="text-primary font-semibold mb-3">MERN Stack Developer</p>
+                        <p class="text-gray-600 mb-4">
+                            Focused on scalable and robust web applications, Farhan adds strength to our development
+                            team with his full-stack expertise.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Milestones Timeline -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Journey</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Key milestones that shaped TechCorp into the company it is today
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Milestone 1 -->
+                <div class="flex items-center" data-aos="fade-right">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        2022
+                    </div>
+                    <div class="ml-6 bg-light p-6 rounded-lg flex-1">
+                        <h3 class="text-xl font-bold text-dark mb-2">Company Foundation</h3>
+                        <p class="text-gray-600">Zevenz Solutions was established with a focus on web development and a
+                            vision to democratize technology for businesses.</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="flex items-center" data-aos="fade-left">
+                    <div class="ml-auto mr-6 bg-light p-6 rounded-lg flex-1 text-right">
+                        <h3 class="text-xl font-bold text-dark mb-2">First Client</h3>
+                        <p class="text-gray-600">Secured our first enterprise client and successfully delivered a
+                            complex e-commerce platform, establishing our reputation for quality.</p>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        2022
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="flex items-center" data-aos="fade-right">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        2023
+                    </div>
+                    <div class="ml-6 bg-light p-6 rounded-lg flex-1">
+                        <h3 class="text-xl font-bold text-dark mb-2">Service Expansion</h3>
+                        <p class="text-gray-600">Expanded our services to include mobile app development, data science,
+                            and video editing to meet growing client demands.</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="flex items-center" data-aos="fade-left">
+                    <div class="ml-auto mr-6 bg-light p-6 rounded-lg flex-1 text-right">
+                        <h3 class="text-xl font-bold text-dark mb-2">Innovation Lab</h3>
+                        <p class="text-gray-600">Launched our innovation lab focusing on AI, machine learning, and
+                            automated trading systems development.</p>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        2023
+                    </div>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="flex items-center" data-aos="fade-right">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        2024
+                    </div>
+                    <div class="ml-6 bg-light p-6 rounded-lg flex-1">
+                        <h3 class="text-xl font-bold text-dark mb-2">50+ Projects Milestone</h3>
+                        <p class="text-gray-600">Reached a significant milestone of 50+ successful projects and
+                            established partnerships with leading technology providers.</p>
+                    </div>
+                </div>
+
+                <!-- Current -->
+                <div class="flex items-center" data-aos="fade-left">
+                    <div class="ml-auto mr-6 bg-light p-6 rounded-lg flex-1 text-right">
+                        <h3 class="text-xl font-bold text-dark mb-2">Continued Growth</h3>
+                        <p class="text-gray-600">Continuing to innovate and expand our capabilities while maintaining
+                            our commitment to excellence and client success.</p>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        2025
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos/Badges -->
+    <section class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Trusted By Industry Leaders</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    We're proud to work with amazing companies across various industries
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center" data-aos="fade-up">
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center h-24 hover:shadow-xl transition duration-300">
+                    <div class="text-2xl font-bold text-gray-400">RetailPro</div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center h-24 hover:shadow-xl transition duration-300">
+                    <div class="text-2xl font-bold text-gray-400">FitLife</div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center h-24 hover:shadow-xl transition duration-300">
+                    <div class="text-2xl font-bold text-gray-400">DataDriven</div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center h-24 hover:shadow-xl transition duration-300">
+                    <div class="text-2xl font-bold text-gray-400">TechFlow</div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center h-24 hover:shadow-xl transition duration-300">
+                    <div class="text-2xl font-bold text-gray-400">InnovateCorp</div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center h-24 hover:shadow-xl transition duration-300">
+                    <div class="text-2xl font-bold text-gray-400">StartupXYZ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Work with Our Team?</h2>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                Join the growing list of satisfied clients who have transformed their businesses with Zevenz Solutions.
+                Let's discuss how we can help you achieve your goals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="contact.html"
+                    class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                    Get in Touch
+                </a>
+                <a href="portfolio.html"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Zevenz Solutions</h3>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Leading the digital transformation with innovative web development, mobile apps,
+                        data science, and cutting-edge technology solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Home</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Portfolio</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">About</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            zevenz.dev@gmail.com
+                        </li>
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            - - - - - - -
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2025 Zevenz Solutions. All rights reserved. |
+                    <a href="#" class="hover:text-primary transition duration-300">Privacy Policy</a> |
+                    <a href="#" class="hover:text-primary transition duration-300">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+
+</html>

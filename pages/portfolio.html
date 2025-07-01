@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - Zevenz Solutions | Showcasing Our Best Work</title>
+    <meta name="description"
+        content="Explore Zevenz's portfolio of successful projects including web applications, mobile apps, data science solutions, and more. See our work in action.">
+    <meta name="keywords"
+        content="portfolio, web development projects, mobile app portfolio, data science projects, case studies, Zevenz work">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1b2b4f',
+                        secondary: '#2d4064',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-primary">Zevenz</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html"
+                            class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition duration-300">Home</a>
+                        <a href="services.html"
+                            class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition duration-300">Services</a>
+                        <a href="portfolio.html"
+                            class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="about.html"
+                            class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition duration-300">About</a>
+                        <a href="contact.html"
+                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-secondary transition duration-300">Contact
+                            Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Home</a>
+                <a href="services.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Services</a>
+                <a href="portfolio.html"
+                    class="block text-primary border-l-4 border-primary bg-blue-50 px-3 py-2 text-base font-medium">Portfolio</a>
+                <a href="about.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">About</a>
+                <a href="contact.html"
+                    class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Portfolio</h1>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                    Discover how we've helped businesses transform their ideas into successful digital solutions.
+                    Our work speaks for itself.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter Section -->
+    <section class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-dark mb-4">Our Work Speaks</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    Browse through our diverse portfolio of successful projects across different industries and
+                    technologies.
+                </p>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button
+                        class="filter-btn active bg-primary text-white px-6 py-3 rounded-lg font-semibold transition duration-300 hover:bg-secondary"
+                        data-filter="all">
+                        All Projects
+                    </button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition duration-300 hover:bg-primary hover:text-white"
+                        data-filter="web">
+                        Web Development
+                    </button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition duration-300 hover:bg-primary hover:text-white"
+                        data-filter="mobile">
+                        Mobile Apps
+                    </button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition duration-300 hover:bg-primary hover:text-white"
+                        data-filter="data">
+                        Data Science
+                    </button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition duration-300 hover:bg-primary hover:text-white"
+                        data-filter="video">
+                        Video Editing
+                    </button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition duration-300 hover:bg-primary hover:text-white"
+                        data-filter="desktop">
+                        Desktop Apps
+                    </button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition duration-300 hover:bg-primary hover:text-white"
+                        data-filter="trading">
+                        Trading Bots
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- E-Commerce Platform -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-primary text-white px-2 py-1 rounded text-sm">E-commerce</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">Node.js</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">Smart BizTrack</h3>
+                        <p class="text-gray-600 mb-4">
+                            Complete general grocery management solution with inventory management, payment processing,
+                            and analytics dashboard and many more features.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('ecommerce')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contractor Management Platform -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-yellow-600 text-white px-2 py-1 rounded text-sm">Construction</span>
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-sm">Laravel</span>
+                            <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">MySQL</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">Thekadar Management System</h3>
+                        <p class="text-gray-600 mb-4">
+                            A powerful tool for contractors to manage projects, labor, expenses, and materials with ease
+                            and efficiency.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('thekadar')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Fitness App -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">Mobile App</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">React Native</span>
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-sm">Firebase</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">FitTracker Pro</h3>
+                        <p class="text-gray-600 mb-4">
+                            Cross-platform fitness app with workout tracking, nutrition monitoring, and social features.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('fitness')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Dashboard -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="data" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded text-sm">Data Science</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">Python</span>
+                            <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">LLM</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">Annotator-Using-LLM</h3>
+                        <p class="text-gray-600 mb-4">
+                            Automates research paper annotation by scraping content and generating summaries, keywords,
+                            and tags using LLMs.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('analytics')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Deepfake & Defect Analyzer -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="data" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded text-sm">Data Science</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">AI</span>
+                            <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">Deepfake Detection</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">Audio-Deepfake-Software-Defect-Analyzer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Dual-purpose ML tool for identifying Urdu audio deepfakes and auto-classifying software
+                            defects from issue descriptions.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('deepfakeDefect')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Platform -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-orange-500 text-white px-2 py-1 rounded text-sm">LMS</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded text-sm">Laravel</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">EduLearn LMS</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive learning management system with video streaming and interactive assessments.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('learning')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trading Bot -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="trading" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-robot text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-yellow-500 text-white px-2 py-1 rounded text-sm">Trading Bot</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">Python</span>
+                            <span class="bg-orange-500 text-white px-2 py-1 rounded text-sm">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">AlgoTrader Pro</h3>
+                        <p class="text-gray-600 mb-4">
+                            Advanced algorithmic trading platform with ML algorithms and risk management.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('trading')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Platform -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="video" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-video text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">Video Platform</span>
+                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">WebGL</span>
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded text-sm">FFmpeg</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">ContentStudio Pro</h3>
+                        <p class="text-gray-600 mb-4">
+                            Professional video editing platform with collaborative features and cloud rendering.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('video')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Train Management System -->
+                <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                    data-category="desktop" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-sky-600 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-train text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-blue-700 text-white px-2 py-1 rounded text-sm">Desktop App</span>
+                            <span class="bg-gray-800 text-white px-2 py-1 rounded text-sm">C#</span>
+                            <span class="bg-orange-500 text-white px-2 py-1 rounded text-sm">Oracle DB</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-dark">Train Management System</h3>
+                        <p class="text-gray-600 mb-4">
+                            A desktop application built in C# for managing railway operations with distinct dashboards
+                            for admins, employees, and passengers.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="openProjectModal('trainApp')"
+                                class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-calendar mr-1"></i>
+                                <span class="text-sm">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button id="load-more"
+                    class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105">
+                    Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Stats Section -->
+    <section class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Portfolio by Numbers</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Our track record speaks for itself
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">150+</div>
+                    <div class="text-gray-600 font-medium">Projects Completed</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">95%</div>
+                    <div class="text-gray-600 font-medium">Client Satisfaction</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+                    <div class="text-gray-600 font-medium">Happy Clients</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">5+</div>
+                    <div class="text-gray-600 font-medium">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Success Stories?</h2>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                Let's create something amazing together. Start your project with Zevenz and become our next success
+                story.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="contact.html"
+                    class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                    Start Your Project
+                </a>
+                <a href="services.html"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-6xl w-full max-h-screen overflow-y-auto relative">
+                <!-- Close Button -->
+                <button onclick="closeProjectModal()"
+                    class="absolute top-4 right-4 w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition duration-300 z-10">
+                    <i class="fas fa-times text-gray-600"></i>
+                </button>
+
+                <!-- Modal Content -->
+                <div id="modalContent" class="p-8">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Zevenz Solutions</h3>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Leading the digital transformation with innovative web development, mobile apps,
+                        data science, and cutting-edge technology solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Home</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Portfolio</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">About</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-300 hover:text-primary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            zevenz.dev@gmail.com
+                        </li>
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            - - - - - - - - -
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2025 Zevenz Solutions. All rights reserved. |
+                    <a href="#" class="hover:text-primary transition duration-300">Privacy Policy</a> |
+                    <a href="#" class="hover:text-primary transition duration-300">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Project Data with Both Video Types and Flexible Features
+        const projectData = {
+            ecommerce: {
+                title: 'Smart BizTrack',
+                subtitle: 'Complete General Grocery Management Solution',
+                category: 'Web Development',
+                year: '2024',
+                client: 'Zevenz Foundation',
+                duration: '6 months',
+                team: '3 developers',
+                status: 'Growing',
+                heroImage: '../images-assets/hero-image.png',
+                demoVideo: {
+                    type: 'youtube', // 'youtube' or 'html5'
+                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    description: 'See how Smart BizTrack transforms grocery management with its intuitive interface and powerful features'
+                },
+                description: 'A comprehensive grocery management platform built for a leading retail company, featuring a modern user interface, robust admin dashboard, and advanced analytics.',
+                problem: 'Small business owners often struggle with keeping track of sales, expenses, inventory, and reports using manual methods or complex software. This leads to poor financial tracking, stock mismanagement, and delayed decision-making.',
+                solution: 'BizTrack is a simple and smart web-based system that helps small business owners manage their daily sales, expenses, and inventory without hassle. It provides real-time tracking, easy report generation, and useful insights to support better business decisions.',
+                features: [
+                    'Sales & Expense Tracking',
+                    'Inventory Management',
+                    'Reports & Analytics',
+                    'Advanced search and filtering capabilities',
+                    'User-Friendly Dashboard',
+                    'Comprehensive admin dashboard with analytics',
+                    'Multi-vendor marketplace support',
+                    'Customer review and rating system',
+                    'Customer Management',
+                    'Employee Management'
+                ],
+                techStack: ['React.js', 'Node.js', 'MongoDB', 'Express', 'Stripe API', 'Socket.io'],
+                screenshots: [
+                    '../images-assets/Biztrack-1.jpg',
+                    '../images-assets/Biztrack-2.jpg'
+                ],
+                results: [
+                    '150% increase in online sales',
+                    '40% improvement in conversion rate',
+                    '60% reduction in cart abandonment',
+                    '99.9% uptime since launch'
+                ],
+                testimonial: {
+                    text: "Zevenz delivered an exceptional e-commerce platform that exceeded our expectations. The performance improvements and user experience have significantly boosted our online sales.",
+                    author: "Hassan Raza",
+                    position: "CEO, Zenvez Foundations"
+                }
+            },
+            thekadar: {
+                title: 'Thekadar Management System',
+                subtitle: 'Contractor Project & Labor Management Tool',
+                category: 'Web Development',
+                year: '2024',
+                client: '',
+                duration: '5 months',
+                team: '3 developers',
+                status: 'Completed & working',
+                heroImage: '../images-assets/thekadar-hero.jpg',
+                demoVideo: {
+                    type: 'youtube',
+                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    description: 'Watch how Thekadar streamlines project and workforce management for construction businesses'
+                },
+                description: 'A builder matchmaking platform where clients can easily find and connect with verified Thekedars (contractors) to build their homes. It simplifies project management and communication in the construction process.',
+                problem: 'Clients often struggle to find trusted Thekedars and manage project discussions effectively. Communication gaps and lack of transparency can delay home-building projects.',
+                solution: 'This platform bridges the gap between clients and Thekedars through real-time chat, secure login, and structured negotiation forms. It streamlines collaboration, improves trust, and speeds up decision-making.',
+                features: [
+                    'Project & Site Management',
+                    'Daily Labor Attendance',
+                    'Material Inventory Tracking',
+                    'Expense & Budget Control',
+                    'Wage Calculation',
+                    'Negotiation form for project scope, pricing, and timeline',
+                    'Contractor Reports & Charts',
+                    'Payment Schedule Management',
+                    'Multi-site Dashboard',
+                    'OTP-based user authentication via Nodemailer'
+                ],
+                techStack: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
+                screenshots: [
+                    '../images-assets/thekadar1.jpg',
+                    '../images-assets/thekadar2.jpg'
+                ],
+                results: [
+                    'Saved 20+ hours weekly in manual tracking',
+                    'Reduced budget overruns by 35%',
+                    'Increased team accountability',
+                    'Improved project timelines by 25%'
+                ],
+                testimonial: {
+                    text: "Thekadar helped our team stay organized and on track. It simplified wage calculations and made project tracking super easy.",
+                    author: "Imran Bashir",
+                    position: "Founder, Builder Base Pvt Ltd"
+                }
+            },
+            fitness: {
+                title: 'FitTracker Pro',
+                subtitle: 'Complete Fitness Tracking Mobile Application',
+                category: 'Mobile App Development',
+                year: '2024',
+                client: 'FitLife Studios',
+                duration: '4 months',
+                team: '5 developers',
+                status: 'Live on App Stores',
+                heroImage: 'https://via.placeholder.com/800x400/10B981/ffffff?text=FitTracker+Pro',
+                demoVideo: {
+                    type: 'html5', // Using HTML5 video for this project
+                    url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+                    poster: 'https://via.placeholder.com/800x400/10B981/ffffff?text=FitTracker+Demo',
+                    description: 'Watch how FitTracker Pro helps users achieve their fitness goals with personalized workouts and progress tracking'
+                },
+                description: 'A comprehensive fitness tracking mobile application that helps users monitor their workouts, track progress, and achieve their fitness goals with personalized recommendations.',
+                problem: 'Users needed a comprehensive fitness tracking solution that could monitor various types of workouts, provide personalized recommendations, and integrate with wearable devices.',
+                solution: 'We developed a cross-platform mobile app using React Native that integrates with popular fitness trackers, provides AI-powered workout recommendations, and includes social features for motivation.',
+                features: [
+                    'Workout tracking and planning',
+                    'Integration with fitness wearables',
+                    'Personalized workout recommendations',
+                    'Progress tracking and analytics',
+                    'Social features and challenges',
+                    'Nutrition tracking and meal planning'
+                ],
+                techStack: ['React Native', 'Firebase', 'Node.js', 'Google Fit API', 'Apple HealthKit', 'TensorFlow'],
+                screenshots: [
+                    'https://via.placeholder.com/300x600/10B981/ffffff?text=Home+Screen',
+                    'https://via.placeholder.com/300x600/059669/ffffff?text=Workout+Tracking',
+                    'https://via.placeholder.com/300x600/047857/ffffff?text=Progress+Analytics',
+                    'https://via.placeholder.com/300x600/065F46/ffffff?text=Social+Features'
+                ],
+                results: [
+                    '50K+ app downloads in first month',
+                    '4.8/5 star rating on app stores',
+                    '85% user retention rate',
+                    'Featured in "Best Fitness Apps" lists'
+                ],
+                testimonial: {
+                    text: "The FitTracker Pro app has revolutionized how our clients track their fitness journey. The integration with wearables and personalized recommendations are game-changers.",
+                    author: "Mike Rodriguez",
+                    position: "Founder, FitLife Studios"
+                }
+            },
+            analytics: {
+                title: 'Annotator-Using-LLM',
+                subtitle: 'Scrapper & Automating Paper Annotation Using Large Language Models',
+                category: 'Data Science',
+                year: '2025',
+                client: 'N/A (Open Research Tool)',
+                duration: '2 months',
+                team: '1 data scientist',
+                status: 'Beta',
+                heroImage: '../images-assets/annotator-hero.jpg',
+                demoVideo: {
+                    type: 'youtube',
+                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    description: 'Explore how Annotator-Using-LLM streamlines academic research with automation and AI.'
+                },
+                description: 'A Python-based research tool that scrapes academic papers from online repositories and uses Large Language Models to auto-generate summaries, keywords, annotations, and topic tags.',
+                problem: 'Manually annotating and summarizing research papers is time-consuming and often inconsistent across researchers.',
+                solution: 'Annotator-Using-LLM scrapes content from research websites and uses AI to generate insightful annotations, summaries, and metadata to accelerate research workflows.',
+                features: [
+                    'Research Paper Web Scraping',
+                    'Automated Summarization',
+                    'Keyword & Tag Generation',
+                    'Topic Classification',
+                    'Multi-format Output (JSON, PDF)',
+                    'Easy Integration with Reference Managers',
+                    'OpenAI / Llama2 Model Support',
+                    'Fast Batch Processing'
+                ],
+                techStack: ['Python', 'BeautifulSoup', 'OpenAI API', 'Llama2', 'Pandas', 'Flask'],
+                screenshots: [
+                    '../images-assets/annotator1.jpg',
+                    '../images-assets/annotator2.jpg'
+                ],
+                results: [
+                    '80% time reduction in annotation tasks',
+                    'Higher consistency across annotations',
+                    'Support for 100+ academic sources',
+                    'Open-source API integration readiness'
+                ],
+                testimonial: {
+                    text: "This tool is a game-changer for academic researchers. Annotating papers is now fast, reliable, and smart — thanks to LLMs.",
+                    author: "Dr. Sana Tariq",
+                    position: "Assistant Professor, FAST NUCES"
+                }
+            },
+            deepfakeDefect: {
+                title: 'Audio-Deepfake-Software-Defect-Analyzer',
+                subtitle: 'AI System for Urdu Audio Deepfake Detection and Software Defect Classification',
+                category: 'Data Science',
+                year: '2025',
+                client: 'Academic Research Project',
+                duration: '5 months',
+                team: '3 AI engineers',
+                status: 'Prototype Stage',
+                heroImage: '../images-assets/deepfake-hero.jpg',
+                demoVideo: {
+                    type: 'youtube',
+                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    description: 'Demonstration of real-time deepfake detection and bug categorization using machine learning and NLP'
+                },
+                description: 'An innovative dual-function application that combines advanced audio forensics to detect Urdu language deepfakes and leverages NLP to auto-classify software defect types from textual issue reports.',
+                problem: 'Deepfake audio in regional languages like Urdu poses cybersecurity risks, while classifying software defects manually is inefficient and error-prone.',
+                solution: 'This tool detects manipulated audio samples using deep neural networks trained on Urdu datasets and classifies issue descriptions into software defect categories using LLM-powered NLP pipelines.',
+                features: [
+                    'Urdu Audio Deepfake Detection',
+                    'Spectrogram + MFCC-Based Audio Analysis',
+                    'Issue Description Preprocessing Pipeline',
+                    'Software Bug Type Classification',
+                    'Multi-model Support (CNN, RNN, Transformers)',
+                    'Evaluation Metrics Dashboard',
+                    'CSV & JSON Batch Upload Support',
+                    'Interactive Visualization & Report Generation'
+                ],
+                techStack: ['Python', 'TensorFlow', 'Librosa', 'Transformers', 'Scikit-learn', 'Streamlit'],
+                screenshots: [
+                    '../images-assets/deepfake1.jpg',
+                    '../images-assets/deepfake2.jpg'
+                ],
+                results: [
+                    'Achieved 91% accuracy on Urdu audio deepfake classification',
+                    'Reduced manual bug triage time by 60%',
+                    'Supports 5+ software defect categories',
+                    'Processed 10,000+ real-world issues for training'
+                ],
+                testimonial: {
+                    text: "A unique combination of audio forensics and NLP. It’s a promising tool for cybersecurity and QA automation.",
+                    author: "Dr. Ahsan Mehmood",
+                    position: "AI Researcher, COMSATS University"
+                }
+            },
+            learning: {
+                title: 'EduLearn LMS Platform',
+                subtitle: 'Comprehensive Learning Management System',
+                category: 'Web Development',
+                year: '2024',
+                client: 'EduTech Solutions',
+                duration: '7 months',
+                team: '10 developers',
+                status: 'Live & Growing',
+                heroImage: 'https://via.placeholder.com/800x400/F59E0B/ffffff?text=EduLearn+LMS',
+                demoVideo: {
+                    type: 'html5',
+                    url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4',
+                    poster: 'https://via.placeholder.com/800x400/F59E0B/ffffff?text=EduLearn+Demo',
+                    description: 'Experience the future of online learning with EduLearn\'s interactive features and comprehensive course management'
+                },
+                description: 'A modern learning management system that provides comprehensive tools for online education, course management, and student engagement.',
+                problem: 'Educational institutions needed a modern, scalable platform to deliver online courses with interactive features and comprehensive tracking capabilities.',
+                solution: 'We developed a full-featured LMS using Vue.js and Laravel, implementing video streaming, interactive quizzes, progress tracking, and advanced collaboration tools.',
+                features: [
+                    'Course creation and management tools',
+                    'Video streaming and playback',
+                    'Interactive quizzes and assessments',
+                    'Student progress tracking',
+                    'Discussion forums and chat'
+                ],
+                techStack: ['Vue.js', 'Laravel', 'MySQL', 'FFmpeg', 'WebRTC', 'AWS S3'],
+                screenshots: [
+                    'https://via.placeholder.com/600x400/F59E0B/ffffff?text=Course+Dashboard',
+                    'https://via.placeholder.com/600x400/D97706/ffffff?text=Video+Player',
+                    'https://via.placeholder.com/600x400/B45309/ffffff?text=Quiz+System',
+                    'https://via.placeholder.com/600x400/92400E/ffffff?text=Analytics+Panel'
+                ],
+                results: [
+                    '25K+ active students enrolled',
+                    '95% course completion rate',
+                    '40% improvement in learning outcomes',
+                    'Deployed across 15+ institutions'
+                ],
+                testimonial: {
+                    text: "EduLearn has revolutionized our online learning capabilities. Students love the interactive features and teachers appreciate the comprehensive analytics.",
+                    author: "Prof. Robert Kim",
+                    position: "Director of Digital Learning, EduTech Solutions"
+                }
+            },
+            trading: {
+                title: 'AlgoTrader Pro',
+                subtitle: 'Advanced Algorithmic Trading Platform',
+                category: 'Trading Bot Development',
+                year: '2023',
+                client: 'QuantFin Capital',
+                duration: '8 months',
+                team: '7 specialists',
+                status: 'Live & Profitable',
+                heroImage: 'https://via.placeholder.com/800x400/EF4444/ffffff?text=AlgoTrader+Pro',
+                demoVideo: {
+                    type: 'youtube',
+                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    description: 'See AlgoTrader Pro in action with its advanced algorithms and real-time market analysis capabilities'
+                },
+                description: 'A sophisticated algorithmic trading platform with advanced backtesting capabilities, real-time market data integration, and automated trading strategies.',
+                problem: 'Trading firm needed a robust platform to automate trading strategies, reduce human error, and capitalize on market opportunities 24/7.',
+                solution: 'We developed a high-performance trading system using Python and C++, implementing advanced algorithms, real-time data processing, and comprehensive risk management.',
+                features: [
+                    'Advanced algorithmic trading strategies',
+                    'Real-time market data integration',
+                    'Comprehensive backtesting engine',
+                    'Risk management and position sizing',
+                    'Multi-asset class support',
+                    'Performance analytics and reporting',
+                    'Alert and notification system'
+                ],
+                techStack: ['Python', 'C++', 'PostgreSQL', 'Redis', 'Apache Kafka', 'TensorFlow'],
+                screenshots: [
+                    'https://via.placeholder.com/600x400/EF4444/ffffff?text=Trading+Dashboard',
+                    'https://via.placeholder.com/600x400/DC2626/ffffff?text=Strategy+Builder',
+                    'https://via.placeholder.com/600x400/B91C1C/ffffff?text=Backtesting+Results',
+                    'https://via.placeholder.com/600x400/991B1B/ffffff?text=Performance+Analytics'
+                ],
+                results: [
+                    '24% average annual returns',
+                    '0.8 Sharpe ratio improvement',
+                    '99.5% uptime and reliability',
+                    '$50M+ in assets under management'
+                ],
+                testimonial: {
+                    text: "AlgoTrader Pro has significantly enhanced our trading capabilities. The backtesting engine and risk management features are exceptionally robust.",
+                    author: "James Wilson",
+                    position: "Head of Trading, QuantFin Capital"
+                }
+            },
+            video: {
+                title: 'ContentStudio Pro',
+                subtitle: 'Professional Video Editing Platform',
+                category: 'Video Editing Services',
+                year: '2023',
+                client: 'MediaCraft Studios',
+                duration: '6 months',
+                team: '9 specialists',
+                status: 'Live & Expanding',
+                heroImage: 'https://via.placeholder.com/800x400/8B5CF6/ffffff?text=ContentStudio+Pro',
+                demoVideo: {
+                    type: 'html5',
+                    url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4',
+                    poster: 'https://via.placeholder.com/800x400/8B5CF6/ffffff?text=ContentStudio+Demo',
+                    webm: 'https://sample-videos.com/zip/10/webm/SampleVideo_1280x720_5mb.webm',
+                    description: 'Experience professional video editing in your browser with ContentStudio Pro\'s powerful tools and collaborative features'
+                },
+                description: 'A cloud-based video editing platform that provides professional-grade tools for content creators, with collaborative features and automated workflows.',
+                problem: 'Content creators needed a powerful yet accessible video editing solution that could handle high-resolution content while enabling team collaboration.',
+                solution: 'We built a web-based video editing platform using WebGL and modern web technologies, implementing real-time collaboration, cloud rendering, and AI-powered features.',
+                features: [
+                    'Browser-based video editing interface',
+                    'Real-time collaboration tools',
+                    'Cloud rendering and processing',
+                    'AI-powered auto-editing features',
+                    'Multi-format export options',
+                    'Asset library and stock footage',
+                    'Color grading and effects',
+                    'Audio editing and mixing',
+                    'Template and preset system',
+                    'Version control and backup',
+                    'Custom workflow automation',
+                    'Team permission management'
+                ],
+                techStack: ['WebGL', 'Node.js', 'FFmpeg', 'WebRTC', 'AWS Media Services', 'TensorFlow.js'],
+                screenshots: [
+                    'https://via.placeholder.com/600x400/8B5CF6/ffffff?text=Editing+Interface',
+                    'https://via.placeholder.com/600x400/7C3AED/ffffff?text=Timeline+View',
+                    'https://via.placeholder.com/600x400/6D28D9/ffffff?text=Effects+Panel',
+                    'https://via.placeholder.com/600x400/5B21B6/ffffff?text=Export+Options'
+                ],
+                results: [
+                    '80% faster editing workflow',
+                    '500+ active creators using platform',
+                    '10M+ minutes of video processed',
+                    '98% customer satisfaction rate'
+                ],
+                testimonial: {
+                    text: "ContentStudio Pro has streamlined our entire video production workflow. The collaborative features have made remote work seamless for our team.",
+                    author: "Amanda Davis",
+                    position: "Creative Director, MediaCraft Studios"
+                }
+            },
+            trainApp: {
+                title: 'Train Management System',
+                subtitle: 'Desktop Application using C# and Oracle Database',
+                category: 'Desktop Application',
+                year: '2025',
+                client: 'RailTech Systems',
+                duration: '3 months',
+                team: '2 developers',
+                status: 'Completed',
+                heroImage: '../images-assets/train-hero.jpg',
+                demoVideo: {
+                    type: 'youtube',
+                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                    description: 'Walkthrough of the Train Management System for admins, employees, and passengers'
+                },
+                description: 'A full-featured train management desktop application with secure Oracle DB integration. Supports three roles: Admin, Employee, and Passenger, each with tailored dashboards.',
+                problem: 'Traditional train systems rely heavily on paper-based management or outdated legacy software, lacking role-based dashboards and integration with modern databases.',
+                solution: 'This modern desktop application offers a centralized solution for managing trains, employees, bookings, customer support, and feedback using a clean C# WinForms UI connected to an Oracle database.',
+                features: [
+                    'Role-based Dashboards: Admin, Employee, Passenger',
+                    'Train Management & Revenue Analytics',
+                    'Employee Task Assignment & Salary Viewer',
+                    'Passenger Booking, Tracking & Feedback System',
+                    'Oracle DB Integration with Secure Queries',
+                    'Login, Signup, and Splash Screen Functionality',
+                    'Smooth Navigation and State Management',
+                    'Multi-form Interactions'
+                ],
+                techStack: ['C# (.NET Framework)', 'WinForms', 'Oracle Database'],
+                screenshots: [
+                    '../images-assets/train1.jpg',
+                    '../images-assets/train2.jpg'
+                ],
+                results: [
+                    'Improved train operation efficiency by 45%',
+                    'Simplified booking and employee task tracking',
+                    'Integrated secure connection with Oracle DB',
+                    'Successfully deployed across 3 departments'
+                ],
+                testimonial: {
+                    text: "The Train Management System has made administrative and operational tasks seamless. It’s a reliable and secure solution.",
+                    author: "Engr. Adeel Khan",
+                    position: "System Supervisor, RailTech Systems"
+                }
+            }
+
+        };
+
+        // Modal Functions
+        function openProjectModal(projectId) {
+            const project = projectData[projectId];
+            if (!project) return;
+
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
+
+            // Generate modal content
+            modalContent.innerHTML = `
+                <!-- Hero Section -->
+                <div class="relative mb-8">
+                    <img src="${project.heroImage}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h1 class="text-4xl font-bold mb-2">${project.title}</h1>
+                            <p class="text-xl">${project.subtitle}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                    <div class="lg:col-span-2">
+                        <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                        <p class="text-gray-600 mb-6">${project.description}</p>
+                        
+                        <h3 class="text-xl font-semibold mb-3">The Challenge</h3>
+                        <p class="text-gray-600 mb-6">${project.problem}</p>
+                        
+                        <h3 class="text-xl font-semibold mb-3">Our Solution</h3>
+                        <p class="text-gray-600">${project.solution}</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="font-medium text-gray-700">Client:</span>
+                                <span class="text-gray-600">${project.client}</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-700">Category:</span>
+                                <span class="text-gray-600">${project.category}</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-700">Duration:</span>
+                                <span class="text-gray-600">${project.duration}</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-700">Team Size:</span>
+                                <span class="text-gray-600">${project.team}</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-700">Status:</span>
+                                <span class="text-green-600 font-medium">${project.status}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo Video Section -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Demo Video</h2>
+                    <div class="relative rounded-lg overflow-hidden shadow-lg">
+                        ${project.demoVideo.type === 'youtube' ? `
+                            <div class="relative pb-56.25 h-0">
+                                <iframe 
+                                    src="${project.demoVideo.url}" 
+                                    class="absolute top-0 left-0 w-full h-full"
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    title="${project.title} Demo Video">
+                                </iframe>
+                            </div>
+                        ` : `
+                            <video 
+                                class="w-full h-auto rounded-lg" 
+                                controls 
+                                poster="${project.demoVideo.poster || ''}"
+                                preload="metadata">
+                                <source src="${project.demoVideo.url}" type="video/mp4">
+                                ${project.demoVideo.webm ? `<source src="${project.demoVideo.webm}" type="video/webm">` : ''}
+                                Your browser does not support the video tag.
+                            </video>
+                        `}
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">
+                        ${project.demoVideo.description || `Watch the demo to see ${project.title} in action`}
+                    </p>
+                </div>
+
+                <!-- Key Features -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${project.features.map(feature => `
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-600">${feature}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Technology Stack -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Technology Stack</h2>
+                    <div class="flex flex-wrap gap-3">
+                        ${project.techStack.map(tech => `
+                            <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">${tech}</span>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Screenshots</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${project.screenshots.map((screenshot, index) => `
+                            <img src="${screenshot}" alt="Screenshot ${index + 1}" class="w-full h-48 object-cover rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Results & Impact</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${project.results.map(result => `
+                            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-chart-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="font-semibold text-green-800">${result}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Testimonial -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Client Testimonial</h2>
+                    <div class="bg-light p-6 rounded-lg">
+                        <div class="flex mb-4">
+                            ${[...Array(5)].map(() => '<i class="fas fa-star text-yellow-400"></i>').join('')}
+                        </div>
+                        <blockquote class="text-lg text-gray-600 italic mb-4">"${project.testimonial.text}"</blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                ${project.testimonial.author.charAt(0)}
+                            </div>
+                            <div>
+                                <div class="font-semibold text-dark">${project.testimonial.author}</div>
+                                <div class="text-gray-600">${project.testimonial.position}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
+                    <p class="text-xl mb-6">Let's discuss how we can bring your ideas to life with innovative solutions.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="bg-accent text-dark px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300">
+                            Get Started
+                        </a>
+                        <button onclick="closeProjectModal()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                            View More Projects
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            // Show modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('projectModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeProjectModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-primary', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-700');
+
+                // Filter portfolio items
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        item.classList.remove('hidden');
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Load more functionality (placeholder)
+        const loadMoreBtn = document.getElementById('load-more');
+        loadMoreBtn.addEventListener('click', () => {
+            // This is a placeholder - in a real implementation, you would load more projects
+            alert('This would load more projects in a real implementation');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+
+</html>
