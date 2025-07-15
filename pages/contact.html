@@ -10,6 +10,10 @@
     <meta name="keywords"
         content="contact zevenz, get quote, free consultation, tech support, project inquiry, contact form">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -18,6 +22,12 @@
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Particles.js for animated backgrounds -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Custom Tailwind Config -->
     <script>
@@ -33,6 +43,25 @@
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'spin-slow': 'spin 6s linear infinite',
+                        'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shake: {
+                            '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                            '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                            '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                            '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+                        }
                     }
                 }
             }
@@ -42,9 +71,209 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Zevenz Solutions",
+        "description": "Contact Zevenz Solutions for your technology needs. Get a free consultation, discuss your project, or request a quote.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Zevenz Solutions",
+            "email": "zevenz.dev@gmail.com",
+            "telephone": "+92 301-1206519",
+            "sameAs": [
+                "https://www.instagram.com/zevenz_tech",
+                "https://www.linkedin.com/in/zevenz-tech-9811a936b",
+                "https://github.com/FAIZAN-Bor"
+            ]
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+92 301-1206519",
+            "contactType": "customer service",
+            "availableLanguage": "English",
+            "email": "zevenz.dev@gmail.com"
+        }
+    }
+    </script>
+
+    <style>
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(27, 43, 79, 0.2);
+            border-top: 5px solid #1b2b4f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Custom scroll bar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1b2b4f;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2d4064;
+        }
+
+        /* Particles container */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        /* Form input focus effects */
+        .form-input {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .form-input:focus {
+            border-color: #1b2b4f;
+            box-shadow: 0 0 0 3px rgba(27, 43, 79, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Form field validation styles */
+        .valid-field {
+            border-color: #10B981 !important;
+        }
+
+        .invalid-field {
+            border-color: #EF4444 !important;
+            animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+        }
+
+        .field-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            visibility: hidden;
+        }
+
+        .valid-field~.valid-icon {
+            visibility: visible;
+            color: #10B981;
+        }
+
+        .invalid-field~.invalid-icon {
+            visibility: visible;
+            color: #EF4444;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Live chat button */
+        .chat-button {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 98;
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Form submission animations */
+        @keyframes formSubmitSuccess {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            70% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .form-success-message {
+            animation: formSubmitSuccess 0.5s ease-out forwards;
+        }
+
+        /* FAQ item animations */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-content.active {
+            max-height: 500px;
+        }
+    </style>
 </head>
 
 <body class="font-sans bg-white text-gray-900 overflow-x-hidden">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="flex flex-col items-center">
+            <div class="loader mb-4"></div>
+            <h2 class="text-primary font-bold text-xl">Zevenz Solutions</h2>
+            <p class="text-gray-500 mt-2">Connecting with excellence...</p>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
@@ -100,14 +329,28 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-28 bg-gradient-to-br from-primary to-secondary text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="pt-28 bg-gradient-to-br from-primary to-secondary text-white py-20 relative overflow-hidden">
+        <!-- Particles background -->
+        <div id="particles-js" class="absolute inset-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center" data-aos="fade-up">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-accent bg-opacity-20 text-accent text-sm font-medium mb-4">
+                    We'd Love To Hear From You
+                </span>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
                 <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
                     Ready to transform your ideas into reality? Let's discuss your project and explore
                     how Zevenz can help you achieve your technology goals.
                 </p>
+                <div class="flex justify-center mt-8">
+                    <a href="#contact-form"
+                        class="flex items-center text-white hover:text-accent transition duration-300">
+                        <span class="mr-2">Reach Out Today</span>
+                        <i class="fas fa-chevron-down animate-bounce"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -126,126 +369,153 @@
     </section>
 
     <!-- Contact Form & Info Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white" id="contact-form">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                 <!-- Contact Form -->
-                <!-- <form id="contactForm" action="https://formspree.io/f/xeoknwja" method="POST" class="space-y-6"> -->
-
                 <div data-aos="fade-right">
-                    <div class="bg-light p-8 rounded-xl shadow-lg">
-                        <h3 class="text-2xl font-bold text-dark mb-6">Send Us a Message</h3>
+                    <div
+                        class="bg-light p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:shadow-2xl">
+                        <h3 class="text-2xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-paper-plane text-accent mr-3"></i>
+                            Send Us a Message
+                        </h3>
                         <form id="contactForm" action="https://formspree.io/f/xeoknwja" method="POST" class="space-y-8">
+                            <!-- Form Progress Indicator -->
+                            <div id="form-progress" class="w-full bg-gray-200 rounded-full h-1.5 mb-6 hidden">
+                                <div class="bg-accent h-1.5 rounded-full transition-all duration-300" style="width: 0%">
+                                </div>
+                            </div>
+
                             <!-- Name Field -->
-                            <div class="mb-6">
+                            <div class="mb-6 relative">
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Full Name *
+                                    Full Name <span class="text-red-500">*</span>
                                 </label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                    placeholder="Your full name">
+                                <div class="relative">
+                                    <input type="text" id="name" name="name" required
+                                        class="form-input w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none transition duration-300"
+                                        placeholder="Your full name">
+                                    <i
+                                        class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                    <i class="fas fa-check-circle field-icon valid-icon"></i>
+                                    <i class="fas fa-exclamation-circle field-icon invalid-icon"></i>
+                                </div>
+                                <p class="error-message hidden mt-1 text-sm text-red-500"></p>
                             </div>
 
                             <!-- Email Field -->
-                            <div class="mb-6"> 
+                            <div class="mb-6 relative">
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Email Address *
+                                    Email Address <span class="text-red-500">*</span>
                                 </label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                    placeholder="your.email@example.com">
+                                <div class="relative">
+                                    <input type="email" id="email" name="email" required
+                                        class="form-input w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none transition duration-300"
+                                        placeholder="your.email@example.com">
+                                    <i
+                                        class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                    <i class="fas fa-check-circle field-icon valid-icon"></i>
+                                    <i class="fas fa-exclamation-circle field-icon invalid-icon"></i>
+                                </div>
+                                <p class="error-message hidden mt-1 text-sm text-red-500"></p>
                             </div>
 
                             <!-- Phone Field -->
-                            <div class="mb-6">
+                            <div class="mb-6 relative">
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Phone Number (Optional)
+                                    Phone Number <span class="text-gray-400">(Optional)</span>
                                 </label>
-                                <input type="tel" id="phone" name="phone"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                    placeholder="+1 (555) 123-4567">
+                                <div class="relative">
+                                    <input type="tel" id="phone" name="phone"
+                                        class="form-input w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none transition duration-300"
+                                        placeholder="+92 123 456 7890">
+                                    <i
+                                        class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                </div>
                             </div>
 
                             <!-- Company Field -->
-                            <div class="mb-6">
+                            <div class="mb-6 relative">
                                 <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Company Name (Optional)
+                                    Company Name <span class="text-gray-400">(Optional)</span>
                                 </label>
-                                <input type="text" id="company" name="company"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                                    placeholder="Your company name">
+                                <div class="relative">
+                                    <input type="text" id="company" name="company"
+                                        class="form-input w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none transition duration-300"
+                                        placeholder="Your company name">
+                                    <i
+                                        class="fas fa-building absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                </div>
                             </div>
 
                             <!-- Service Interest -->
-                            <div class="mb-6">
+                            <div class="mb-6 relative">
                                 <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Service Interest
+                                    Service Interest <span class="text-red-500">*</span>
                                 </label>
-                                <select id="service" name="service"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
-                                    <option value="">Select a service</option>
-                                    <option value="web-development">Web Development</option>
-                                    <option value="mobile-apps">Mobile App Development</option>
-                                    <option value="data-science">Data Science Solutions</option>
-                                    <option value="video-editing">Video Editing Services</option>
-                                    <option value="desktop-apps">Desktop Applications</option>
-                                    <option value="trading-bots">Trading Bot Development</option>
-                                    <option value="consultation">General Consultation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <!-- Budget Range -->
-                            <div class="mb-6">
-                                <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Project Budget Range
-                                </label>
-                                <select id="budget" name="budget"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
-                                    <option value="">Select budget range</option>
-                                    <option value="under-5k">Under $5,000</option>
-                                    <option value="5k-10k">$5,000 - $10,000</option>
-                                    <option value="10k-25k">$10,000 - $25,000</option>
-                                    <option value="25k-50k">$25,000 - $50,000</option>
-                                    <option value="50k-plus">$50,000+</option>
-                                    <option value="discuss">Let's discuss</option>
-                                </select>
+                                <div class="relative">
+                                    <select id="service" name="service" required
+                                        class="form-input w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none appearance-none transition duration-300">
+                                        <option value="">Select a service</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="mobile-apps">Mobile App Development</option>
+                                        <option value="data-science">Data Science Solutions</option>
+                                        <option value="video-editing">Video Editing Services</option>
+                                        <option value="desktop-apps">Desktop Applications</option>
+                                        <option value="trading-bots">Trading Bot Development</option>
+                                        <option value="consultation">General Consultation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <i
+                                        class="fas fa-tasks absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                    <i
+                                        class="fas fa-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                </div>
                             </div>
 
                             <!-- Message Field -->
-                            <div class="mb-6">
+                            <div class="mb-6 relative">
                                 <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Project Details *
+                                    Project Details <span class="text-red-500">*</span>
                                 </label>
-                                <textarea id="message" name="message" rows="5" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300 resize-vertical"
-                                    placeholder="Tell us about your project, requirements, timeline, and any specific questions you have..."></textarea>
+                                <div class="relative">
+                                    <textarea id="message" name="message" rows="5" required
+                                        class="form-input w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none transition duration-300 resize-vertical"
+                                        placeholder="Tell us about your project, requirements, timeline, and any specific questions you have..."></textarea>
+                                    <i class="fas fa-comment absolute left-3 top-6 text-gray-400"></i>
+                                    <i class="fas fa-check-circle field-icon valid-icon" style="top: 24px;"></i>
+                                    <i class="fas fa-exclamation-circle field-icon invalid-icon" style="top: 24px;"></i>
+                                </div>
+                                <p class="error-message hidden mt-1 text-sm text-red-500"></p>
+                                <div class="text-right mt-1">
+                                    <span id="charCount" class="text-sm text-gray-500">0/1000</span>
+                                </div>
                             </div>
 
-                            <!-- Timeline -->
-                            <div class="mb-6">
-                                <label for="timeline" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Project Timeline
-                                </label>
-                                <select id="timeline" name="timeline"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300">
-                                    <option value="">Select timeline</option>
-                                    <option value="asap">ASAP</option>
-                                    <option value="1-month">Within 1 month</option>
-                                    <option value="2-3-months">2-3 months</option>
-                                    <option value="6-months">Within 6 months</option>
-                                    <option value="flexible">Flexible</option>
-                                </select>
-                            </div>
+                            <!-- reCAPTCHA -->
+                            <!-- <div class="mb-6">
+                                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                                <p class="text-xs text-gray-500 mt-2">This helps us prevent spam submissions</p>
+                            </div> -->
 
                             <!-- Submit Button -->
                             <div class="mb-6">
                                 <button type="submit"
                                     class="w-full bg-primary text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-secondary transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                    <i class="fas fa-paper-plane mr-2"></i>
-                                    Send Message
+                                    <div class="flex items-center justify-center">
+                                        <i class="fas fa-paper-plane mr-2"></i>
+                                        <span>Send Message</span>
+                                    </div>
                                 </button>
+                            </div>
+
+                            <!-- Privacy Policy Agreement -->
+                            <div class="text-sm text-gray-500">
+                                By submitting this form, you agree to our
+                                <a href="#" class="text-primary hover:underline">Privacy Policy</a> and
+                                <a href="#" class="text-primary hover:underline">Terms of Service</a>.
                             </div>
 
                             <!-- Form Status Messages -->
@@ -253,71 +523,70 @@
                         </form>
                     </div>
                 </div>
-                <!-- </form> -->
 
                 <!-- Contact Information -->
                 <div data-aos="fade-left">
                     <div class="space-y-8">
-
                         <!-- Contact Details -->
-                        <div class="bg-light p-8 rounded-xl shadow-lg">
-                            <h3 class="text-2xl font-bold text-dark mb-6">Contact Information</h3>
-                            <div class="space-y-4">
+                        <div
+                            class="bg-light p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:shadow-2xl">
+                            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center">
+                                <i class="fas fa-address-card text-accent mr-3"></i>
+                                Contact Information
+                            </h3>
+                            <div class="space-y-6">
                                 <div class="flex items-start">
                                     <div
-                                        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0 animate-float">
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-dark mb-1">Email Us</h4>
-                                        <p class="text-gray-600">zevenz.dev@gmail.com</p>
-                                        <!-- <p class="text-gray-600">support@techcorp.com</p> -->
+                                        <a href="mailto:zevenz.dev@gmail.com"
+                                            class="text-gray-600 hover:text-primary transition-colors duration-300">zevenz.dev@gmail.com</a>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0 animate-float"
+                                        style="animation-delay: 0.1s;">
                                         <i class="fas fa-phone"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-dark mb-1">Call Us</h4>
-                                        <p class="text-gray-600">+92 301-1206519</p>
-                                        <p class="text-gray-600">+92 309-8815771</p>
+                                        <a href="tel:+923011206519"
+                                            class="text-gray-600 hover:text-primary transition-colors duration-300">+92
+                                            301-1206519</a><br>
+                                        <a href="tel:+923098815771"
+                                            class="text-gray-600 hover:text-primary transition-colors duration-300">+92
+                                            309-8815771</a>
                                     </div>
                                 </div>
 
-                                <!-- <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-dark mb-1">Visit Us</h4>
-                                        <p class="text-gray-600">- - - - - - -</p>
-                                    </div>
-                                </div> -->
-
                                 <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0 animate-float"
+                                        style="animation-delay: 0.2s;">
                                         <i class="fas fa-clock"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-dark mb-1">Business Hours</h4>
                                         <p class="text-gray-600">24/7 </p>
-                                        <p class="text-gray-600">All time available</p>
+                                        <p class="text-gray-600">Always available</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Quick Actions -->
-                        <div class="bg-light p-8 rounded-xl shadow-lg">
-                            <h3 class="text-2xl font-bold text-dark mb-6">Quick Actions</h3>
+                        <div
+                            class="bg-light p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:shadow-2xl">
+                            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center">
+                                <i class="fas fa-bolt text-accent mr-3"></i>
+                                Quick Actions
+                            </h3>
                             <div class="space-y-4">
                                 <a href="tel:+923011206519"
-                                    class="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition duration-300">
+                                    class="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition duration-300 transform hover:translate-x-2">
                                     <div
                                         class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white mr-4">
                                         <i class="fas fa-phone"></i>
@@ -329,7 +598,7 @@
                                 </a>
 
                                 <a href="mailto:zevenz.dev@gmail.com"
-                                    class="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition duration-300">
+                                    class="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition duration-300 transform hover:translate-x-2">
                                     <div
                                         class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white mr-4">
                                         <i class="fas fa-envelope"></i>
@@ -340,22 +609,13 @@
                                     </div>
                                 </a>
 
-                                <!-- <button onclick="scheduleCall()"
-                                    class="w-full flex items-center p-4 bg-white rounded-lg hover:shadow-md transition duration-300">
-                                    <div
-                                        class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white mr-4">
-                                        <i class="fas fa-calendar"></i>
-                                    </div>
-                                    <div class="text-left">
-                                        <h4 class="font-semibold text-dark">Schedule Call</h4>
-                                        <p class="text-sm text-gray-600">Book a free consultation</p>
-                                    </div>
-                                </button> -->
+                                </button>
                             </div>
                         </div>
 
                         <!-- Social Links -->
-                        <div class="bg-light p-8 rounded-xl shadow-lg">
+                        <div
+                            class="bg-light p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:shadow-2xl">
                             <h3 class="text-2xl font-bold text-dark mb-6">Follow Us</h3>
                             <div class="flex space-x-4">
                                 <a href="#"
@@ -367,15 +627,18 @@
                                     <i class="fab fa-twitter"></i>
                                 </a> -->
                                 <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                    class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition duration-300" target="_blank">
+                                    class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition duration-300"
+                                    target="_blank">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                                 <a href="https://github.com/FAIZAN-Bor"
-                                    class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-900 transition duration-300" target="_blank">
+                                    class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-900 transition duration-300"
+                                    target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh"
-                                    class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition duration-300" target="_blank">
+                                    class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition duration-300"
+                                    target="_blank">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
@@ -390,6 +653,10 @@
     <section class="py-20 bg-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-primary bg-opacity-10 text-primary text-sm font-medium mb-2">
+                    Common Questions
+                </span>
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     Quick answers to common questions about our services and process
@@ -496,38 +763,6 @@
         </div>
     </section>
 
-    <!-- Map Section (Optional) -->
-    <!-- <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Find Us</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Visit our office for in-person consultations and meetings
-                </p>
-            </div>
-
-            
-            <div class="bg-light rounded-xl p-8 text-center" data-aos="fade-up">
-                <div class="w-full h-96 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-map-marker-alt text-6xl text-gray-500 mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Interactive Map</h3>
-                        <p class="text-gray-600">
-                            123 Tech Street, Suite 400<br>
-                            Digital City, DC 12345<br>
-                            United States
-                        </p>
-                        <a href="https://maps.google.com" target="_blank"
-                            class="inline-block mt-4 bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition duration-300">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            View on Google Maps
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Call to Action Section -->
     <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
@@ -537,7 +772,7 @@
                 life.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#contactForm"
+                <a href="#contact-form"
                     class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
                     <i class="fas fa-rocket mr-2"></i>
                     Start Your Project
@@ -551,7 +786,122 @@
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="back-to-top bg-primary hover:bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Live Chat Button -->
+    <!-- <button id="chatButton" class="chat-button bg-accent hover:bg-yellow-500 text-dark w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+        <div class="relative">
+            <i class="fas fa-comments text-2xl"></i>
+            <span class="absolute -top-2 -right-2 w-5 h-5 bg-green-500 rounded-full border-2 border-white"></span>
+        </div>
+    </button> -->
+
+    <!-- Meeting Scheduler Modal -->
+    <div id="meetingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl max-w-md w-full p-6 relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-calendar text-purple-500 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-dark">Schedule a Meeting</h3>
+                <p class="text-gray-600">Select a convenient date and time for your consultation.</p>
+            </div>
+            <form id="scheduleForm" class="space-y-4">
+                <div>
+                    <label for="meeting-name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="meeting-name"
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                </div>
+                <div>
+                    <label for="meeting-email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
+                    <input type="email" id="meeting-email"
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                </div>
+                <div>
+                    <label for="meeting-date" class="block text-sm font-medium text-gray-700 mb-2">Preferred
+                        Date</label>
+                    <input type="date" id="meeting-date"
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                </div>
+                <div>
+                    <label for="meeting-time" class="block text-sm font-medium text-gray-700 mb-2">Preferred
+                        Time</label>
+                    <input type="time" id="meeting-time"
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition duration-300">
+                    Request Meeting
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="fixed bottom-[100px] right-[30px] bg-white rounded-xl shadow-2xl w-80 z-50 hidden">
+        <div class="bg-primary text-white p-4 rounded-t-xl">
+            <div class="flex justify-between items-center">
+                <h4 class="font-semibold">Chat with us</h4>
+                <button id="closeChatWidget" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="p-4 max-h-80 overflow-y-auto" id="chatMessages">
+            <div class="flex mb-4">
+                <div
+                    class="w-8 h-8 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm">
+                    Z</div>
+                <div class="ml-3 bg-gray-100 p-3 rounded-lg">
+                    <p class="text-sm">Hi there! How can we help you today?</p>
+                    <p class="text-xs text-gray-500 mt-1">Just now</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t p-4">
+            <form id="chatForm" class="flex">
+                <input type="text" id="chatInput" placeholder="Type your message..."
+                    class="flex-1 border border-gray-300 rounded-l-lg px-3 py-2 focus:outline-none">
+                <button type="submit"
+                    class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-secondary transition duration-300">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 px-6 z-50 hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-start">
+                <i class="fas fa-cookie-bite text-primary text-xl mr-3 mt-1"></i>
+                <p class="text-sm text-gray-700">
+                    We use cookies to enhance your experience on our website. By continuing to use this site, you
+                    consent to our use of cookies.
+                    <a href="#" class="text-primary hover:underline">Learn more</a>
+                </p>
+            </div>
+            <div class="flex gap-3">
+                <button id="acceptCookies"
+                    class="bg-primary text-white px-4 py-2 rounded text-sm font-medium hover:bg-secondary transition duration-300">
+                    Accept All
+                </button>
+                <button id="declineCookies"
+                    class="bg-gray-200 text-gray-700 px-4 py-2 rounded text-sm font-medium hover:bg-gray-300 transition duration-300">
+                    Decline
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="bg-dark text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -559,37 +909,44 @@
                 <div class="col-span-1 md:col-span-2">
                     <h3 class="text-2xl font-bold mb-4 text-white">Zevenz Solutions</h3>
                     <p class="text-gray-300 mb-4 max-w-md">
-                        Leading the digital transformation with innovative web development, mobile apps, 
+                        Leading the digital transformation with innovative web development, mobile apps,
                         data science, and cutting-edge technology solutions.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
                             <i class="fab fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                        <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh"
+                            class="text-gray-300 hover:text-white transition duration-300" target="_blank">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                        <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            class="text-gray-300 hover:text-white transition duration-300" target="_blank">
                             <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="https://github.com/FAIZAN-Bor" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                        <a href="https://github.com/FAIZAN-Bor"
+                            class="text-gray-300 hover:text-white transition duration-300" target="_blank">
                             <i class="fab fa-github text-xl"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="pages/services.html" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
-                        <li><a href="pages/portfolio.html" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
-                        <li><a href="pages/about.html" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="pages/contact.html" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="pages/services.html"
+                                class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="pages/portfolio.html"
+                                class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="pages/about.html"
+                                class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="pages/contact.html"
+                                class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Contact Info -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
@@ -600,7 +957,7 @@
                         </li>
                         <li>
                             <i class="fas fa-phone mr-2"></i>
-                            +92 301-1206519 
+                            +92 301-1206519
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt mr-2"></i>
@@ -609,11 +966,11 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p class="text-gray-300">
-                    &copy; 2025 Zevenz Solutions. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> | 
+                    &copy; 2025 Zevenz Solutions. All rights reserved. |
+                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> |
                     <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
                 </p>
             </div>
@@ -625,11 +982,25 @@
 
     <!-- Custom JavaScript -->
     <script>
-        // Initialize AOS
+        // Preloader
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const preloader = document.getElementById('preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 800);
+        });
+
+        // Initialize AOS with enhanced settings
         AOS.init({
             duration: 1000,
-            once: true,
-            offset: 100
+            once: false,
+            offset: 100,
+            easing: 'ease-in-out',
+            mirror: true,
+            delay: 100
         });
 
         // Mobile menu toggle
@@ -638,6 +1009,96 @@
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
         });
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -660,7 +1121,7 @@
 
                     if (response.ok) {
                         status.className = 'mt-4 text-green-600';
-                        // status.textContent = '✅ Thank you! Your message has been sent.';
+                        status.textContent = '✅ Thank you! Your message has been sent.';
                         form.reset();
                     } else {
                         const data = await response.json();
@@ -681,28 +1142,159 @@
             });
         });
 
-        // Contact Form Handling
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form field validation
+        const formInputs = document.querySelectorAll('.form-input');
+
+        formInputs.forEach(input => {
+            input.addEventListener('blur', validateInput);
+            input.addEventListener('input', function () {
+                if (input.id === 'message') {
+                    updateCharCount();
+                }
+            });
+        });
+
+        function validateInput(e) {
+            const input = e.target;
+            const errorMessage = input.parentElement.nextElementSibling;
+
+            if (input.required && !input.value.trim()) {
+                input.classList.add('invalid-field');
+                input.classList.remove('valid-field');
+                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                    errorMessage.textContent = 'This field is required';
+                    errorMessage.classList.remove('hidden');
+                }
+                return false;
+            }
+
+            if (input.id === 'email' && input.value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(input.value)) {
+                    input.classList.add('invalid-field');
+                    input.classList.remove('valid-field');
+                    if (errorMessage && errorMessage.classList.contains('error-message')) {
+                        errorMessage.textContent = 'Please enter a valid email address';
+                        errorMessage.classList.remove('hidden');
+                    }
+                    return false;
+                }
+            }
+
+            if (input.id === 'phone' && input.value) {
+                const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+                if (!phoneRegex.test(input.value)) {
+                    input.classList.add('invalid-field');
+                    input.classList.remove('valid-field');
+                    if (errorMessage && errorMessage.classList.contains('error-message')) {
+                        errorMessage.textContent = 'Please enter a valid phone number';
+                        errorMessage.classList.remove('hidden');
+                    }
+                    return false;
+                }
+            }
+
+            input.classList.remove('invalid-field');
+            input.classList.add('valid-field');
+            if (errorMessage && errorMessage.classList.contains('error-message')) {
+                errorMessage.classList.add('hidden');
+            }
+            return true;
+        }
+
+        // Character counter for message field
+        function updateCharCount() {
+            const messageField = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+            const currentLength = messageField.value.length;
+            const maxLength = 1000;
+
+            charCount.textContent = `${currentLength}/${maxLength}`;
+
+            if (currentLength > maxLength) {
+                charCount.classList.add('text-red-500');
+            } else {
+                charCount.classList.remove('text-red-500');
+            }
+        }
+
+        // Contact Form Handling with animation
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
+            // Validate all fields
+            let isValid = true;
+            formInputs.forEach(input => {
+                if (input.required) {
+                    const event = new Event('blur');
+                    input.dispatchEvent(event);
+                    if (input.classList.contains('invalid-field')) {
+                        isValid = false;
+                    }
+                }
+            });
+
+            if (!isValid) {
+                return;
+            }
+
             const formStatus = document.getElementById('form-status');
             const submitButton = e.target.querySelector('button[type="submit"]');
+            const formProgress = document.getElementById('form-progress');
 
             // Show loading state
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            submitButton.innerHTML = '<div class="flex items-center justify-center"><i class="fas fa-spinner fa-spin mr-2"></i><span>Sending...</span></div>';
             submitButton.disabled = true;
+            formProgress.classList.remove('hidden');
+
+            // Animate progress bar
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += 5;
+                formProgress.firstElementChild.style.width = `${Math.min(progress, 90)}%`;
+                if (progress >= 90) clearInterval(progressInterval);
+            }, 100);
 
             // Simulate form submission (replace with actual form handling)
             setTimeout(() => {
-                formStatus.className = 'block p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg';
-                formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.';
+                clearInterval(progressInterval);
+                formProgress.firstElementChild.style.width = '100%';
+
+                formStatus.className = 'block p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg form-success-message';
+                formStatus.innerHTML = `
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-white"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="font-semibold">Thank you!</h3>
+                            <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                `;
 
                 // Reset form
                 e.target.reset();
+                formInputs.forEach(input => {
+                    input.classList.remove('valid-field', 'invalid-field');
+                });
 
                 // Reset button
-                submitButton.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
+                submitButton.innerHTML = '<div class="flex items-center justify-center"><i class="fas fa-paper-plane mr-2"></i><span>Send Message</span></div>';
                 submitButton.disabled = false;
+
+                // Hide progress bar
+                setTimeout(() => {
+                    formProgress.classList.add('hidden');
+                    formProgress.firstElementChild.style.width = '0%';
+                }, 1000);
 
                 // Hide success message after 5 seconds
                 setTimeout(() => {
@@ -711,24 +1303,138 @@
             }, 2000);
         });
 
-        // FAQ Toggle Function
+        // FAQ Toggle Function with smoother animation
         function toggleFAQ(element) {
             const content = element.nextElementSibling;
             const icon = element.querySelector('i');
 
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if (item !== content && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            if (!content.classList.contains('active')) {
+                content.classList.add('active');
                 icon.style.transform = 'rotate(180deg)';
             } else {
-                content.classList.add('hidden');
+                content.classList.remove('active');
                 icon.style.transform = 'rotate(0deg)';
             }
         }
 
-        // Schedule Call Function
-        function scheduleCall() {
-            alert('This would open a calendar booking system like Calendly in a real implementation.');
+        // Chat Widget Functionality
+        const chatButton = document.getElementById('chatButton');
+        const chatWidget = document.getElementById('chatWidget');
+        const closeChatWidget = document.getElementById('closeChatWidget');
+        const chatForm = document.getElementById('chatForm');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        chatButton.addEventListener('click', () => {
+            chatWidget.classList.toggle('hidden');
+        });
+
+        closeChatWidget.addEventListener('click', () => {
+            chatWidget.classList.add('hidden');
+        });
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!chatInput.value.trim()) return;
+
+            // Add user message
+            addChatMessage(chatInput.value, 'user');
+
+            // Simulate response after a short delay
+            setTimeout(() => {
+                addChatMessage("Thanks for your message! Our team will respond shortly.", 'bot');
+            }, 1000);
+
+            chatInput.value = '';
+        });
+
+        function addChatMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex mb-4 ' + (sender === 'user' ? 'justify-end' : '');
+
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            if (sender === 'user') {
+                messageDiv.innerHTML = `
+                    <div class="mr-3 bg-primary bg-opacity-10 p-3 rounded-lg">
+                        <p class="text-sm">${message}</p>
+                        <p class="text-xs text-gray-500 mt-1">${time}</p>
+                    </div>
+                    <div class="w-8 h-8 bg-accent rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm">You</div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="w-8 h-8 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm">Z</div>
+                    <div class="ml-3 bg-gray-100 p-3 rounded-lg">
+                        <p class="text-sm">${message}</p>
+                        <p class="text-xs text-gray-500 mt-1">${time}</p>
+                    </div>
+                `;
+            }
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
+
+        // Meeting Scheduler Modal
+        const scheduleButton = document.getElementById('schedule-meeting');
+        const meetingModal = document.getElementById('meetingModal');
+        const closeModal = document.getElementById('closeModal');
+        const scheduleForm = document.getElementById('scheduleForm');
+
+        scheduleButton.addEventListener('click', () => {
+            meetingModal.classList.remove('hidden');
+        });
+
+        closeModal.addEventListener('click', () => {
+            meetingModal.classList.add('hidden');
+        });
+
+        scheduleForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically handle the form submission to your backend
+            alert('Thank you! Your meeting request has been received. We\'ll confirm shortly.');
+            meetingModal.classList.add('hidden');
+            scheduleForm.reset();
+        });
+
+        // Close modal when clicking outside
+        meetingModal.addEventListener('click', (e) => {
+            if (e.target === meetingModal) {
+                meetingModal.classList.add('hidden');
+            }
+        });
+
+        // Cookie Consent
+        document.addEventListener('DOMContentLoaded', function () {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+
+            // Check if user has already made a choice
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    cookieConsent.classList.remove('hidden');
+                }, 2000);
+            }
+
+            acceptCookies.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieConsent.classList.add('hidden');
+            });
+
+            declineCookies.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieConsent.classList.add('hidden');
+            });
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -748,9 +1454,11 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('nav');
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-xl');
+                navbar.classList.add('shadow-xl', 'bg-white/95', 'backdrop-blur-sm');
+                navbar.classList.remove('bg-white');
             } else {
-                navbar.classList.remove('shadow-xl');
+                navbar.classList.add('bg-white');
+                navbar.classList.remove('shadow-xl', 'bg-white/95', 'backdrop-blur-sm');
             }
         });
     </script>
