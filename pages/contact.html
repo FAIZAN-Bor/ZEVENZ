@@ -335,16 +335,6 @@
             opacity: 1;
         }
 
-        .nav-search-box {
-            transition: all 0.3s ease;
-            width: 0;
-            overflow: hidden;
-        }
-
-        .nav-search-box.active {
-            width: 200px;
-        }
-
         .menu-icon {
             width: 24px;
             height: 24px;
@@ -426,20 +416,6 @@
                     </a>
                 </div>
 
-                <!-- Desktop Search -->
-                <div class="hidden lg:flex items-center ml-4 relative">
-                    <div class="nav-search-box bg-gray-100 rounded-full flex items-center overflow-hidden" id="searchBox">
-                        <input type="text" placeholder="Search our services..."
-                            class="bg-transparent border-none focus:outline-none px-4 py-2 w-full">
-                        <button class="bg-primary text-white p-2 rounded-full mr-1">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <button id="searchToggle" class="text-gray-500 hover:text-primary ml-2">
-                        <i class="fas fa-search text-lg"></i>
-                    </button>
-                </div>
-
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="../index.html"
@@ -490,9 +466,6 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-search-toggle" class="text-gray-700 hover:text-primary mr-4 focus:outline-none">
-                        <i class="fas fa-search text-xl"></i>
-                    </button>
                     <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle menu">
                         <div class="menu-icon">
                             <span></span>
@@ -502,17 +475,6 @@
                         </div>
                     </button>
                 </div>
-            </div>
-        </div>
-
-        <!-- Mobile Search Box (hidden by default) -->
-        <div id="mobile-search-box" class="hidden px-4 py-3 border-t border-gray-200 bg-white">
-            <div class="relative">
-                <input type="text" placeholder="Search services..."
-                    class="w-full bg-gray-100 border-none rounded-full px-4 py-2 focus:outline-none">
-                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
-                    <i class="fas fa-search"></i>
-                </button>
             </div>
         </div>
 
@@ -1284,16 +1246,6 @@
                 }
             });
         });
-
-        // Mobile search toggle
-        const mobileSearchToggle = document.getElementById('mobile-search-toggle');
-        const mobileSearchBox = document.getElementById('mobile-search-box');
-
-        if (mobileSearchToggle && mobileSearchBox) {
-            mobileSearchToggle.addEventListener('click', () => {
-                mobileSearchBox.classList.toggle('hidden');
-            });
-        }
 
         // Initialize particles.js
         particlesJS('particles-js', {
