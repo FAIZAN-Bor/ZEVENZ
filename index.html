@@ -8,6 +8,7 @@
     <meta name="keywords" content="web development, mobile app development, data science, video editing, desktop applications, trading bots">
     
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images-assets/favicon.svg">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     
@@ -307,1150 +308,1163 @@
         }
     </style>
 </head>
-<body class="font-sans bg-white text-gray-900">
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="flex flex-col items-center">
-            <div class="loader mb-4"></div>
-            <h2 class="text-primary font-bold text-xl">Zevenz Solutions</h2>
-            <p class="text-gray-500 mt-2">Loading amazing experiences...</p>
+<body class="font-sans bg-white text-gray-900 overflow-x-hidden">
+    <div class="overflow-x-hidden">
+        <!-- Preloader -->
+        <div class="preloader" id="preloader">
+            <div class="flex flex-col items-center">
+                <div class="loader mb-4"></div>
+                <h2 class="text-primary font-bold text-xl">Zevenz Solutions</h2>
+                <p class="text-gray-500 mt-2">Loading amazing experiences...</p>
+            </div>
         </div>
-    </div>
-    
-    <!-- Navigation -->
-    <nav class="navbar-glass fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-2">
-                        <!-- Replace with actual logo image if available -->
-                        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl">Z</div>
-                        <h1 class="text-2xl font-bold text-primary hidden sm:block">Zevenz</h1>
-                    </a>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="#home" class="nav-link active text-primary px-4 py-6 text-sm font-medium transition-all duration-300">Home</a>
-                    
-                    <!-- Services Dropdown -->
-                    <div class="dropdown-toggle relative group">
-                        <a href="pages/services.html" class="nav-link text-gray-700 hover:text-primary px-4 py-6 text-sm font-medium transition-all duration-300 flex items-center">
-                            Services <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-300 group-hover:rotate-180"></i>
+        
+        <!-- Navigation -->
+        <nav class="navbar-glass fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center gap-2">
+                            <!-- Replace with actual logo image if available -->
+                            <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl">Z</div>
+                            <h1 class="text-2xl font-bold text-primary hidden sm:block">Zevenz</h1>
                         </a>
-                        <div class="dropdown-menu">
-                            <a href="pages/services.html#web-development" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Web Development</a>
-                            <a href="pages/services.html#mobile-development" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Mobile Apps</a>
-                            <a href="pages/services.html#data-science" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Data Science</a>
-                            <a href="pages/services.html#video-editing" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Video Editing</a>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#home" class="nav-link active text-primary px-4 py-6 text-sm font-medium transition-all duration-300">Home</a>
+                        
+                        <!-- Services Dropdown -->
+                        <div class="dropdown-toggle relative group">
+                            <a href="pages/services.html" class="nav-link text-gray-700 hover:text-primary px-4 py-6 text-sm font-medium transition-all duration-300 flex items-center">
+                                Services <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-300 group-hover:rotate-180"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="pages/services.html#web-development" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Web Development</a>
+                                <a href="pages/services.html#mobile-development" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Mobile Apps</a>
+                                <a href="pages/services.html#data-science" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Data Science</a>
+                                <a href="pages/services.html#video-editing" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Video Editing</a>
+                                <a href="pages/services.html#desktop-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Desktop Apps</a>
+                            <a href="pages/services.html#trading-bots" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Trading Bots</a>
+                            </div>
+                        </div>
+                        
+                        <a href="pages/portfolio.html" class="nav-link text-gray-700 hover:text-primary px-4 py-6 text-sm font-medium transition-all duration-300">Portfolio</a>
+                        <a href="pages/about.html" class="nav-link text-gray-700 hover:text-primary px-4 py-6 text-sm font-medium transition-all duration-300">About</a>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div class="hidden md:block">
+                        <a href="pages/contact.html" class="bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-lg text-sm font-medium transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                            Contact Us
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle menu">
+                            <div class="menu-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t mobile-menu-animation">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block text-primary border-l-4 border-primary bg-blue-50 px-3 py-2 text-base font-medium">Home</a>
+                    
+                    <!-- Mobile Services Sub-menu -->
+                    <div class="mobile-dropdown">
+                        <button class="w-full text-left flex justify-between items-center text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">
+                            Services
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="pl-4 hidden">
+                            <a href="pages/services.html#web-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Web Development</a>
+                            <a href="pages/services.html#mobile-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Mobile Apps</a>
+                            <a href="pages/services.html#data-science" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Data Science</a>
+                            <a href="pages/services.html#video-editing" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Video Editing</a>
                             <a href="pages/services.html#desktop-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Desktop Apps</a>
-                        <a href="pages/services.html#trading-bots" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Trading Bots</a>
+                            <a href="pages/services.html#trading-bots" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Trading Bots</a>
                         </div>
                     </div>
                     
-                    <a href="pages/portfolio.html" class="nav-link text-gray-700 hover:text-primary px-4 py-6 text-sm font-medium transition-all duration-300">Portfolio</a>
-                    <a href="pages/about.html" class="nav-link text-gray-700 hover:text-primary px-4 py-6 text-sm font-medium transition-all duration-300">About</a>
-                </div>
-                
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="pages/contact.html" class="bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-lg text-sm font-medium transition duration-300 transform hover:scale-105 hover:shadow-lg">
-                        Contact Us
-                    </a>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle menu">
-                        <div class="menu-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </button>
+                    <a href="pages/portfolio.html" class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Portfolio</a>
+                    <a href="pages/about.html" class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">About</a>
+                    <a href="pages/contact.html" class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Contact Us</a>
+                    
+                    <!-- Mobile Social Icons -->
+                    <div class="flex items-center space-x-4 px-3 py-4 border-t border-gray-200 mt-2">
+                        <a href="#" class="text-gray-500 hover:text-primary">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh" class="text-gray-500 hover:text-primary" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-500 hover:text-primary" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/FAIZAN-Bor" class="text-gray-500 hover:text-primary" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t mobile-menu-animation">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block text-primary border-l-4 border-primary bg-blue-50 px-3 py-2 text-base font-medium">Home</a>
-                
-                <!-- Mobile Services Sub-menu -->
-                <div class="mobile-dropdown">
-                    <button class="w-full text-left flex justify-between items-center text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">
-                        Services
-                        <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="pl-4 hidden">
-                        <a href="pages/services.html#web-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Web Development</a>
-                        <a href="pages/services.html#mobile-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Mobile Apps</a>
-                        <a href="pages/services.html#data-science" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Data Science</a>
-                        <a href="pages/services.html#video-editing" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-600 hover:text-primary">Video Editing</a>
-                        <a href="pages/services.html#desktop-development" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Desktop Apps</a>
-                        <a href="pages/services.html#trading-bots" class="block border-l border-gray-200 pl-3 py-2 text-sm text-gray-800 hover:text-primary">Trading Bots</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="pt-16 bg-gradient-to-br from-primary to-secondary text-white min-h-screen flex items-center relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute rounded-full w-64 h-64 bg-accent bg-opacity-10 top-1/4 left-1/4 animate-pulse-slow"></div>
+                <div class="absolute rounded-full w-96 h-96 bg-blue-500 bg-opacity-10 bottom-1/4 right-1/3 animate-pulse-slow" style="animation-delay: 1s;"></div>
+                <div class="absolute rounded-full w-48 h-48 bg-purple-500 bg-opacity-10 top-1/3 right-1/4 animate-pulse-slow" style="animation-delay: 2s;"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+                <div class="text-center" data-aos="fade-up">
+                    <span class="inline-block py-1 px-3 rounded-full bg-accent bg-opacity-20 text-accent text-sm font-medium mb-4">
+                        Innovative Technology Solutions
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Transform Your Ideas Into 
+                        <span class="gradient-text">Digital Reality</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                        We're a leading tech company specializing in web development, mobile apps, data science, 
+                        and cutting-edge digital solutions that drive business growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="pages/portfolio.html" class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                            View Our Work
+                        </a>
+                        <a href="pages/contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300 group">
+                            Get Started
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <a href="pages/portfolio.html" class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Portfolio</a>
-                <a href="pages/about.html" class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">About</a>
-                <a href="pages/contact.html" class="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Contact Us</a>
+                <!-- Scroll Down Indicator -->
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer animate-bounce-slow" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+                    <span class="text-sm text-blue-100 mb-2">Scroll Down</span>
+                    <i class="fas fa-chevron-down text-accent"></i>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Our Services Section -->
+        <section id="services" class="py-20 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Services</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Comprehensive tech solutions tailored to your business needs
+                    </p>
+                </div>
                 
-                <!-- Mobile Social Icons -->
-                <div class="flex items-center space-x-4 px-3 py-4 border-t border-gray-200 mt-2">
-                    <a href="#" class="text-gray-500 hover:text-primary">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh" class="text-gray-500 hover:text-primary" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-500 hover:text-primary" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/FAIZAN-Bor" class="text-gray-500 hover:text-primary" target="_blank">
-                        <i class="fab fa-github"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Web Development -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Web Development</h3>
+                        <p class="text-gray-600 mb-6">
+                            Custom websites and web applications built with modern technologies like React, Vue, and Node.js.
+                        </p>
+                        <a href="pages/services.html#web-development" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Mobile App Development -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Mobile App Development</h3>
+                        <p class="text-gray-600 mb-6">
+                            Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.
+                        </p>
+                        <a href="pages/services.html#mobile-development" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Data Science Solutions -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Data Science Solutions</h3>
+                        <p class="text-gray-600 mb-6">
+                            Advanced analytics, machine learning, and AI solutions to unlock insights from your data.
+                        </p>
+                        <a href="pages/services.html#data-science" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Video Editing Services -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Video Editing Services</h3>
+                        <p class="text-gray-600 mb-6">
+                            Professional video editing and post-production services for marketing, training, and entertainment.
+                        </p>
+                        <a href="pages/services.html#video-editing" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Applications -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Desktop Applications</h3>
+                        <p class="text-gray-600 mb-6">
+                            Cross-platform desktop applications using Electron, .NET, and other modern frameworks.
+                        </p>
+                        <a href="pages/services.html#desktop-development" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trading Bot Development -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Trading Bot Development</h3>
+                        <p class="text-gray-600 mb-6">
+                            Automated trading solutions and algorithmic trading bots for cryptocurrency and stock markets.
+                        </p>
+                        <a href="pages/services.html#trading-bots" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">
+                            <span class="counter" data-target="100">0</span>+
+                        </div>
+                        <p class="text-blue-100">Projects Completed</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">
+                            <span class="counter" data-target="50">0</span>+
+                        </div>
+                        <p class="text-blue-100">Happy Clients</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">
+                            <span class="counter" data-target="7">0</span>+
+                        </div>
+                        <p class="text-blue-100">Team Members</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">
+                            <span class="counter" data-target="99">0</span>%
+                        </div>
+                        <p class="text-blue-100">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Why Choose Zevenz</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        We deliver exceptional results through innovation, expertise, and dedication
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Fast Delivery</h3>
+                        <p class="text-gray-600">
+                            We prioritize quick turnaround times without compromising on quality, ensuring your projects launch on schedule.
+                        </p>
+                    </div>
+
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Expert Team</h3>
+                        <p class="text-gray-600">
+                            Our team consists of seasoned professionals with years of experience in cutting-edge technologies.
+                        </p>
+                    </div>
+
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Quality Assurance</h3>
+                        <p class="text-gray-600">
+                            Rigorous testing and quality control processes ensure every project meets the highest standards.
+                        </p>
+                    </div>
+
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">24/7 Support</h3>
+                        <p class="text-gray-600">
+                            Round-the-clock support to address any issues and ensure smooth operation of your solutions.
+                        </p>
+                    </div>
+
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dollar-sign text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Competitive Pricing</h3>
+                        <p class="text-gray-600">
+                            Transparent, competitive pricing with no hidden costs. Get the best value for your investment.
+                        </p>
+                    </div>
+
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sync-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-dark">Agile Methodology</h3>
+                        <p class="text-gray-600">
+                            Flexible development process that adapts to changing requirements and delivers results iteratively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview Section -->
+        <section class="py-20 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Featured Projects</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Take a look at some of our recent successful projects
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-primary text-white px-2 py-1 rounded text-sm">E-commerce</span>
+                                <span class="bg-accent text-dark px-2 py-1 rounded text-sm">React</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">E-Commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">
+                                Modern e-commerce solution with advanced features and seamless user experience.
+                            </p>                        <button onclick="openProjectModal('ecommerce')" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">Mobile App</span>
+                                <span class="bg-accent text-dark px-2 py-1 rounded text-sm">React Native</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">Fitness Tracking App</h3>
+                            <p class="text-gray-600 mb-4">
+                                Cross-platform mobile app for fitness tracking with real-time analytics.
+                            </p>                        <button onclick="openProjectModal('fitness')" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-500 text-white px-2 py-1 rounded text-sm">Data Science</span>
+                                <span class="bg-accent text-dark px-2 py-1 rounded text-sm">Python</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">Analytics Dashboard</h3>
+                            <p class="text-gray-600 mb-4">
+                                Advanced analytics dashboard with machine learning insights and predictions.
+                            </p>                        <button onclick="openProjectModal('analytics')" class="text-primary font-semibold hover:text-secondary transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <a href="pages/portfolio.html" class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105">
+                        View All Projects
                     </a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-16 bg-gradient-to-br from-primary to-secondary text-white min-h-screen flex items-center relative overflow-hidden">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute rounded-full w-64 h-64 bg-accent bg-opacity-10 top-1/4 left-1/4 animate-pulse-slow"></div>
-            <div class="absolute rounded-full w-96 h-96 bg-blue-500 bg-opacity-10 bottom-1/4 right-1/3 animate-pulse-slow" style="animation-delay: 1s;"></div>
-            <div class="absolute rounded-full w-48 h-48 bg-purple-500 bg-opacity-10 top-1/3 right-1/4 animate-pulse-slow" style="animation-delay: 2s;"></div>
-        </div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
-            <div class="text-center" data-aos="fade-up">
-                <span class="inline-block py-1 px-3 rounded-full bg-accent bg-opacity-20 text-accent text-sm font-medium mb-4">
-                    Innovative Technology Solutions
-                </span>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Transform Your Ideas Into 
-                    <span class="gradient-text">Digital Reality</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                    We're a leading tech company specializing in web development, mobile apps, data science, 
-                    and cutting-edge digital solutions that drive business growth.
+
+        <!-- Call to Action Section -->
+        <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+                <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                    Let's discuss your project and see how we can help you achieve your goals with cutting-edge technology solutions.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="pages/portfolio.html" class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 hover:shadow-lg">
-                        View Our Work
+                    <a href="pages/contact.html" class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i> Start Your Project
                     </a>
-                    <a href="pages/contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300 group">
-                        Get Started
-                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    <a href="pages/portfolio.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                        <i class="fas fa-eye mr-2"></i> View Our Work
                     </a>
                 </div>
             </div>
-            
-            <!-- Scroll Down Indicator -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer animate-bounce-slow" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
-                <span class="text-sm text-blue-100 mb-2">Scroll Down</span>
-                <i class="fas fa-chevron-down text-accent"></i>
-            </div>
-        </div>
-    </section>
+        </section>
+        
+        
 
-    
+        <!-- Project Detail Modal -->
+        <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <div class="flex items-center justify-center min-h-screen p-4">
+                <div class="bg-white rounded-xl max-w-6xl w-full max-h-screen overflow-y-auto relative">
+                    <!-- Close Button -->
+                    <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition duration-300 z-10">
+                        <i class="fas fa-times text-gray-600"></i>
+                    </button>
 
-    <!-- Our Services Section -->
-    <section id="services" class="py-20 bg-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Services</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Comprehensive tech solutions tailored to your business needs
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Web Development -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-code"></i>
+                    <!-- Modal Content -->
+                    <div id="modalContent" class="p-8">
+                        <!-- Content will be dynamically inserted here -->
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Web Development</h3>
-                    <p class="text-gray-600 mb-6">
-                        Custom websites and web applications built with modern technologies like React, Vue, and Node.js.
-                    </p>
-                    <a href="pages/services.html#web-development" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Mobile App Development -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Mobile App Development</h3>
-                    <p class="text-gray-600 mb-6">
-                        Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.
-                    </p>
-                    <a href="pages/services.html#mobile-development" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Data Science Solutions -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Data Science Solutions</h3>
-                    <p class="text-gray-600 mb-6">
-                        Advanced analytics, machine learning, and AI solutions to unlock insights from your data.
-                    </p>
-                    <a href="pages/services.html#data-science" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Video Editing Services -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Video Editing Services</h3>
-                    <p class="text-gray-600 mb-6">
-                        Professional video editing and post-production services for marketing, training, and entertainment.
-                    </p>
-                    <a href="pages/services.html#video-editing" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Desktop Applications -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Desktop Applications</h3>
-                    <p class="text-gray-600 mb-6">
-                        Cross-platform desktop applications using Electron, .NET, and other modern frameworks.
-                    </p>
-                    <a href="pages/services.html#desktop-development" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Trading Bot Development -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Trading Bot Development</h3>
-                    <p class="text-gray-600 mb-6">
-                        Automated trading solutions and algorithmic trading bots for cryptocurrency and stock markets.
-                    </p>
-                    <a href="pages/services.html#trading-bots" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Statistics Section -->
-    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">
-                        <span class="counter" data-target="100">0</span>+
-                    </div>
-                    <p class="text-blue-100">Projects Completed</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">
-                        <span class="counter" data-target="50">0</span>+
-                    </div>
-                    <p class="text-blue-100">Happy Clients</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">
-                        <span class="counter" data-target="7">0</span>+
-                    </div>
-                    <p class="text-blue-100">Team Members</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">
-                        <span class="counter" data-target="99">0</span>%
-                    </div>
-                    <p class="text-blue-100">Client Satisfaction</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Why Choose Zevenz</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    We deliver exceptional results through innovation, expertise, and dedication
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-rocket text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Fast Delivery</h3>
-                    <p class="text-gray-600">
-                        We prioritize quick turnaround times without compromising on quality, ensuring your projects launch on schedule.
-                    </p>
-                </div>
-
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Expert Team</h3>
-                    <p class="text-gray-600">
-                        Our team consists of seasoned professionals with years of experience in cutting-edge technologies.
-                    </p>
-                </div>
-
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Quality Assurance</h3>
-                    <p class="text-gray-600">
-                        Rigorous testing and quality control processes ensure every project meets the highest standards.
-                    </p>
-                </div>
-
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-headset text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">24/7 Support</h3>
-                    <p class="text-gray-600">
-                        Round-the-clock support to address any issues and ensure smooth operation of your solutions.
-                    </p>
-                </div>
-
-                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-dollar-sign text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Competitive Pricing</h3>
-                    <p class="text-gray-600">
-                        Transparent, competitive pricing with no hidden costs. Get the best value for your investment.
-                    </p>
-                </div>
-
-                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
-                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-sync-alt text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-dark">Agile Methodology</h3>
-                    <p class="text-gray-600">
-                        Flexible development process that adapts to changing requirements and delivers results iteratively.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Preview Section -->
-    <section class="py-20 bg-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Featured Projects</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Take a look at some of our recent successful projects
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="bg-primary text-white px-2 py-1 rounded text-sm">E-commerce</span>
-                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">React</span>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="col-span-1 md:col-span-2">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Zevenz Solutions</h3>
+                        <p class="text-gray-300 mb-4 max-w-md">
+                            Leading the digital transformation with innovative web development, mobile apps, 
+                            data science, and cutting-edge technology solutions.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="https://github.com/FAIZAN-Bor" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-dark">E-Commerce Platform</h3>
-                        <p class="text-gray-600 mb-4">
-                            Modern e-commerce solution with advanced features and seamless user experience.
-                        </p>                        <button onclick="openProjectModal('ecommerce')" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
-                        <i class="fas fa-mobile-alt text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">Mobile App</span>
-                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">React Native</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-dark">Fitness Tracking App</h3>
-                        <p class="text-gray-600 mb-4">
-                            Cross-platform mobile app for fitness tracking with real-time analytics.
-                        </p>                        <button onclick="openProjectModal('fitness')" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                        <i class="fas fa-chart-bar text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="bg-purple-500 text-white px-2 py-1 rounded text-sm">Data Science</span>
-                            <span class="bg-accent text-dark px-2 py-1 rounded text-sm">Python</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-dark">Analytics Dashboard</h3>
-                        <p class="text-gray-600 mb-4">
-                            Advanced analytics dashboard with machine learning insights and predictions.
-                        </p>                        <button onclick="openProjectModal('analytics')" class="text-primary font-semibold hover:text-secondary transition duration-300">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="pages/portfolio.html" class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105">
-                    View All Projects
-                </a>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- Call to Action Section -->
-    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-                Let's discuss your project and see how we can help you achieve your goals with cutting-edge technology solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="pages/contact.html" class="bg-accent text-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
-                    <i class="fas fa-rocket mr-2"></i> Start Your Project
-                </a>
-                <a href="pages/portfolio.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
-                    <i class="fas fa-eye mr-2"></i> View Our Work
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    
-
-    <!-- Project Detail Modal -->
-    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-xl max-w-6xl w-full max-h-screen overflow-y-auto relative">
-                <!-- Close Button -->
-                <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition duration-300 z-10">
-                    <i class="fas fa-times text-gray-600"></i>
-                </button>
-
-                <!-- Modal Content -->
-                <div id="modalContent" class="p-8">
-                    <!-- Content will be dynamically inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Zevenz Solutions</h3>
-                    <p class="text-gray-300 mb-4 max-w-md">
-                        Leading the digital transformation with innovative web development, mobile apps, 
-                        data science, and cutting-edge technology solutions.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/zevenz_tech?igsh=Z3FteGx6emFxc3hh" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/zevenz-tech-9811a936b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="https://github.com/FAIZAN-Bor" class="text-gray-300 hover:text-white transition duration-300" target="_blank">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="pages/services.html" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
-                        <li><a href="pages/portfolio.html" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
-                        <li><a href="pages/about.html" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="pages/contact.html" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>
-                            <i class="fas fa-envelope mr-2"></i>
-                            zevenz.dev@gmail.com
-                        </li>
-                        <li>
-                            <i class="fas fa-phone mr-2"></i>
-                            +92 301-1206519 
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            - - - - - - - -
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">
-                    &copy; 2025 Zevenz Solutions. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> | 
-                    <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top bg-primary hover:bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 px-6 z-50 hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-start">
-                <i class="fas fa-cookie-bite text-primary text-xl mr-3 mt-1"></i>
-                <p class="text-sm text-gray-700">
-                    We use cookies to enhance your experience on our website. By continuing to use this site, you consent to our use of cookies.
-                    <a href="#" class="text-primary hover-underline">Learn more</a>
-                </p>
-            </div>
-            <div class="flex gap-3">
-                <button id="acceptCookies" class="bg-primary text-white px-4 py-2 rounded text-sm font-medium hover:bg-secondary transition duration-300">
-                    Accept All
-                </button>
-                <button id="declineCookies" class="bg-gray-200 text-gray-700 px-4 py-2 rounded text-sm font-medium hover:bg-gray-300 transition duration-300">
-                    Decline
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- AOS (Animate On Scroll) JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script>
-        // Preloader
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const preloader = document.getElementById('preloader');
-                preloader.style.opacity = '0';
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                }, 500);
-            }, 800);
-        });
-
-        // Initialize AOS with enhanced settings
-        AOS.init({
-            duration: 1000,
-            once: false,
-            offset: 100,
-            easing: 'ease-in-out',
-            mirror: true,
-            delay: 100
-        });
-
-        // Counter animation
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200; // The lower the value, the faster the animation
-
-        function runCounters() {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = Math.ceil(target / speed);
-                
-                if (count < target) {
-                    counter.innerText = Math.min(count + increment, target);
-                    setTimeout(() => runCounters(), 30);
-                }
-            });
-        }
-
-        // Initialize counters when they come into view
-        const statsSection = document.querySelector('.counter').closest('section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    runCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        observer.observe(statsSection);
-
-        // Client Logo Carousel
-        const clientLogos = new Swiper('.client-logos', {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 3,
-                },
-                768: {
-                    slidesPerView: 4,
-                },
-                1024: {
-                    slidesPerView: 5,
-                },
-            },
-        });
-
-        // Testimonials Slider
-        const testimonialsSlider = new Swiper('.testimonials-slider', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
-        
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('active');
-            } else {
-                backToTopButton.classList.remove('active');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Cookie Consent
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieConsent = document.getElementById('cookieConsent');
-            const acceptCookies = document.getElementById('acceptCookies');
-            const declineCookies = document.getElementById('declineCookies');
-            
-            // Check if user has already made a choice
-            if (!localStorage.getItem('cookieConsent')) {
-                setTimeout(() => {
-                    cookieConsent.classList.remove('hidden');
-                }, 2000);
-            }
-            
-            acceptCookies.addEventListener('click', () => {
-                localStorage.setItem('cookieConsent', 'accepted');
-                cookieConsent.classList.add('hidden');
-            });
-            
-            declineCookies.addEventListener('click', () => {
-                localStorage.setItem('cookieConsent', 'declined');
-                cookieConsent.classList.add('hidden');
-            });
-        });
-
-        // Navbar background change on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-xl', 'bg-white/95', 'backdrop-blur-sm');
-                navbar.classList.remove('bg-white');
-            } else {
-                navbar.classList.add('bg-white');
-                navbar.classList.remove('shadow-xl', 'bg-white/95', 'backdrop-blur-sm');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Project Data for Modals
-        const projectData = {
-            ecommerce: {
-                title: 'ShopMax E-Commerce Platform',
-                subtitle: 'Complete E-Commerce Solution with Admin Dashboard',
-                category: 'Web Development',
-                year: '2024',
-                client: 'RetailCorp Inc.',
-                duration: '6 months',
-                team: '8 developers',
-                status: 'Live & Growing',
-                heroImage: 'https://via.placeholder.com/800x400/3B82F6/ffffff?text=ShopMax+E-Commerce',
-                demoVideo: {
-                    type: 'youtube',
-                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-                    description: 'See how ShopMax transforms the online shopping experience with its intuitive interface and powerful features'
-                },
-                description: 'A comprehensive e-commerce platform built for a leading retail company, featuring a modern user interface, robust admin dashboard, and advanced analytics.',
-                problem: 'The client needed a scalable e-commerce solution that could handle high traffic volumes while providing excellent user experience and comprehensive inventory management.',
-                solution: 'We developed a modern, responsive e-commerce platform using React.js and Node.js with microservices architecture, implementing advanced features like real-time inventory tracking, AI-powered recommendations, and comprehensive analytics.',
-                features: [
-                    'Responsive design optimized for all devices',
-                    'Real-time inventory management system',
-                    'AI-powered product recommendations',
-                    'Advanced search and filtering capabilities',
-                    'Secure payment gateway integration',
-                    'Comprehensive admin dashboard with analytics',
-                    'Multi-vendor marketplace support',
-                    'Customer review and rating system'
-                ],
-                techStack: ['React.js', 'Node.js', 'MongoDB', 'Express', 'Stripe API', 'AWS', 'Redis', 'Socket.io'],
-                screenshots: [
-                    'https://via.placeholder.com/600x400/3B82F6/ffffff?text=Homepage',
-                    'https://via.placeholder.com/600x400/1E40AF/ffffff?text=Product+Page',
-                    'https://via.placeholder.com/600x400/F59E0B/ffffff?text=Admin+Dashboard',
-                    'https://via.placeholder.com/600x400/10B981/ffffff?text=Checkout+Process'
-                ],
-                results: [
-                    '150% increase in online sales',
-                    '40% improvement in conversion rate',
-                    '60% reduction in cart abandonment',
-                    '99.9% uptime since launch'
-                ],
-                testimonial: {
-                    text: "Zevenz delivered an exceptional e-commerce platform that exceeded our expectations. The performance improvements and user experience have significantly boosted our online sales.",
-                    author: "Sarah Johnson",
-                    position: "CEO, RetailCorp Inc."
-                }
-            },
-            fitness: {
-                title: 'FitTracker Pro',
-                subtitle: 'Complete Fitness Tracking Mobile Application',
-                category: 'Mobile App Development',
-                year: '2024',
-                client: 'FitLife Studios',
-                duration: '4 months',
-                team: '5 developers',
-                status: 'Live on App Stores',
-                heroImage: 'https://via.placeholder.com/800x400/10B981/ffffff?text=FitTracker+Pro',
-                demoVideo: {
-                    type: 'html5',
-                    url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
-                    poster: 'https://via.placeholder.com/800x400/10B981/ffffff?text=FitTracker+Demo',
-                    description: 'Watch how FitTracker Pro helps users achieve their fitness goals with personalized workouts and progress tracking'
-                },
-                description: 'A comprehensive fitness tracking mobile application that helps users monitor their workouts, track progress, and achieve their fitness goals with personalized recommendations.',
-                problem: 'Users needed a comprehensive fitness tracking solution that could monitor various types of workouts, provide personalized recommendations, and integrate with wearable devices.',
-                solution: 'We developed a cross-platform mobile app using React Native that integrates with popular fitness trackers, provides AI-powered workout recommendations, and includes social features for motivation.',
-                features: [
-                    'Workout tracking and planning',
-                    'Integration with fitness wearables',
-                    'Personalized workout recommendations',
-                    'Progress tracking and analytics',
-                    'Social features and challenges',
-                    'Nutrition tracking and meal planning'
-                ],
-                techStack: ['React Native', 'Firebase', 'Node.js', 'Google Fit API', 'Apple HealthKit', 'TensorFlow'],
-                screenshots: [
-                    'https://via.placeholder.com/300x600/10B981/ffffff?text=Home+Screen',
-                    'https://via.placeholder.com/300x600/059669/ffffff?text=Workout+Tracking',
-                    'https://via.placeholder.com/300x600/047857/ffffff?text=Progress+Analytics',
-                    'https://via.placeholder.com/300x600/065F46/ffffff?text=Social+Features'
-                ],
-                results: [
-                    '50K+ app downloads in first month',
-                    '4.8/5 star rating on app stores',
-                    '85% user retention rate',
-                    'Featured in "Best Fitness Apps" lists'
-                ],
-                testimonial: {
-                    text: "The FitTracker Pro app has revolutionized how our clients track their fitness journey. The integration with wearables and personalized recommendations are game-changers.",
-                    author: "Mike Rodriguez",
-                    position: "Founder, FitLife Studios"
-                }
-            },
-            analytics: {
-                title: 'InsightPro Analytics Dashboard',
-                subtitle: 'Advanced Business Intelligence Platform',
-                category: 'Data Science',
-                year: '2024',
-                client: 'DataDriven Corp',
-                duration: '5 months',
-                team: '6 specialists',
-                status: 'Live & Scaling',
-                heroImage: 'https://via.placeholder.com/800x400/8B5CF6/ffffff?text=InsightPro+Analytics',
-                demoVideo: {
-                    type: 'youtube',
-                    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-                    description: 'Discover how InsightPro transforms complex data into actionable business insights with interactive visualizations'
-                },
-                description: 'A comprehensive business intelligence platform that transforms raw data into actionable insights through advanced analytics and interactive visualizations.',
-                problem: 'The client struggled with data scattered across multiple systems and needed a unified platform to gain meaningful insights for strategic decision-making.',
-                solution: 'We built a comprehensive analytics platform using Python and modern data visualization libraries, implementing machine learning algorithms for predictive analytics and automated reporting.',
-                features: [
-                    'Real-time data visualization dashboards',
-                    'Predictive analytics and forecasting',
-                    'Custom report generation',
-                    'Data source integration (APIs, databases)',
-                    'Interactive charts and graphs',
-                    'Automated alert system',
-                    'Role-based access control',
-                    'Export and sharing capabilities',
-                    'Mobile-responsive design',
-                    'Advanced filtering and drill-down capabilities'
-                ],
-                techStack: ['Python', 'Django', 'D3.js', 'PostgreSQL', 'Apache Spark', 'TensorFlow', 'Redis', 'Docker'],
-                screenshots: [
-                    'https://via.placeholder.com/600x400/8B5CF6/ffffff?text=Main+Dashboard',
-                    'https://via.placeholder.com/600x400/7C3AED/ffffff?text=Analytics+View',
-                    'https://via.placeholder.com/600x400/6D28D9/ffffff?text=Reports+Section',
-                    'https://via.placeholder.com/600x400/5B21B6/ffffff?text=Data+Sources'
-                ],
-                results: [
-                    '70% faster decision-making process',
-                    '45% improvement in forecast accuracy',
-                    '80% reduction in manual reporting time',
-                    '300% ROI within first year'
-                ],
-                testimonial: {
-                    text: "InsightPro has transformed how we analyze our business data. The predictive analytics capabilities have given us a significant competitive advantage.",
-                    author: "Dr. Lisa Chen",
-                    position: "Chief Data Officer, DataDriven Corp"
-                }
-            }
-        };
-
-        // Modal Functions
-        function openProjectModal(projectId) {
-            const project = projectData[projectId];
-            if (!project) return;
-
-            const modal = document.getElementById('projectModal');
-            const modalContent = document.getElementById('modalContent');
-
-            // Generate modal content
-            modalContent.innerHTML = `
-                <!-- Hero Section -->
-                <div class="relative mb-8">
-                    <img src="${project.heroImage}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <h1 class="text-4xl font-bold mb-2">${project.title}</h1>
-                            <p class="text-xl">${project.subtitle}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Overview -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                    <div class="lg:col-span-2">
-                        <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
-                        <p class="text-gray-600 mb-6">${project.description}</p>
-                        
-                        <h3 class="text-xl font-semibold mb-3">The Challenge</h3>
-                        <p class="text-gray-600 mb-6">${project.problem}</p>
-                        
-                        <h3 class="text-xl font-semibold mb-3">Our Solution</h3>
-                        <p class="text-gray-600">${project.solution}</p>
                     </div>
                     
-                    <div class="bg-light p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-4">Project Details</h3>
-                        <div class="space-y-3">
-                            <div class="flex justify-between">
-                                <span class="font-medium text-gray-700">Client:</span>
-                                <span class="text-gray-600">${project.client}</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="font-medium text-gray-700">Category:</span>
-                                <span class="text-gray-600">${project.category}</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="font-medium text-gray-700">Duration:</span>
-                                <span class="text-gray-600">${project.duration}</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="font-medium text-gray-700">Team Size:</span>
-                                <span class="text-gray-600">${project.team}</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="font-medium text-gray-700">Status:</span>
-                                <span class="text-green-600 font-semibold">${project.status}</span>
-                            </div>
-                        </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="pages/services.html" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+                            <li><a href="pages/portfolio.html" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+                            <li><a href="pages/about.html" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                            <li><a href="pages/contact.html" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>
+                                <i class="fas fa-envelope mr-2"></i>
+                                zevenz.dev@gmail.com
+                            </li>
+                            <li>
+                                <i class="fas fa-phone mr-2"></i>
+                                +92 301-1206519 
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                - - - - - - - -
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- Demo Video Section -->
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Demo Video</h2>
-                    <div class="relative rounded-lg overflow-hidden shadow-lg">
-                        ${project.demoVideo.type === 'youtube' ? `
-                            <div class="relative pb-56.25 h-0">
-                                <iframe 
-                                    src="${project.demoVideo.url}" 
-                                    class="absolute top-0 left-0 w-full h-full"
-                                    frameborder="0" 
-                                    allowfullscreen
-                                    title="${project.title} Demo Video">
-                                </iframe>
-                            </div>
-                        ` : `
-                            <video 
-                                class="w-full h-auto rounded-lg" 
-                                controls 
-                                poster="${project.demoVideo.poster || ''}"
-                                preload="metadata">
-                                <source src="${project.demoVideo.url}" type="video/mp4">
-                                ${project.demoVideo.webm ? `<source src="${project.demoVideo.webm}" type="video/webm">` : ''}
-                                Your browser does not support the video tag.
-                            </video>
-                        `}
-                    </div>
-                    <p class="text-sm text-gray-500 mt-2">
-                        ${project.demoVideo.description || `Watch the demo to see ${project.title} in action`}
+                
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                    <p class="text-gray-300">
+                        &copy; 2025 Zevenz Solutions. All rights reserved. | 
+                        <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> | 
+                        <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
                     </p>
                 </div>
+            </div>
+        </footer>
 
-                <!-- Key Features -->
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Key Features</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${project.features.map(feature => `
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                                    <i class="fas fa-check text-white text-sm"></i>
-                                </div>
-                                <span class="text-gray-600">${feature}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-
-                <!-- Technology Stack -->
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Technology Stack</h2>
-                    <div class="flex flex-wrap gap-3">
-                        ${project.techStack.map(tech => `
-                            <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">${tech}</span>
-                        `).join('')}
-                    </div>
-                </div>
-
-                <!-- Screenshots -->
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Screenshots</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${project.screenshots.map((screenshot, index) => `
-                            <img src="${screenshot}" alt="Screenshot ${index + 1}" class="w-full h-48 object-cover rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        `).join('')}
-                    </div>
-                </div>
-
-                <!-- Results -->
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Results & Impact</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${project.results.map(result => `
-                            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-                                <div class="flex items-center">
-                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                                        <i class="fas fa-chart-line text-white text-sm"></i>
-                                    </div>
-                                    <span class="font-semibold text-green-800">${result}</span>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-
-                <!-- Testimonial -->
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Client Testimonial</h2>
-                    <div class="bg-light p-6 rounded-lg">
-                        <div class="flex mb-4">
-                            ${[...Array(5)].map(() => '<i class="fas fa-star text-yellow-400"></i>').join('')}
-                        </div>
-                        <blockquote class="text-lg text-gray-600 italic mb-4">"${project.testimonial.text}"</blockquote>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                ${project.testimonial.author.charAt(0)}
-                            </div>
-                            <div>
-                                <div class="font-semibold text-dark">${project.testimonial.author}</div>
-                                <div class="text-gray-600">${project.testimonial.position}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="text-center bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
-                    <p class="text-xl mb-6">Let's discuss how we can bring your ideas to life with innovative solutions.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="pages/contact.html" class="bg-accent text-dark px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300">
-                            Get Started
-                        </a>
-                        <button onclick="closeProjectModal()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
-                            View More Projects
-                        </button>
-                    </div>
-                </div>
-            `;
-
-            // Show modal
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProjectModal() {
-            const modal = document.getElementById('projectModal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('projectModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeProjectModal();
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeProjectModal();
-            }
-        });
-    </script>
-    
-    <!-- Navigation enhancement scripts -->
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 20) {
-                navbar.classList.add('navbar-sticky');
-            } else {
-                navbar.classList.remove('navbar-sticky');
-            }
-        });
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top bg-primary hover:bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+            <i class="fas fa-arrow-up"></i>
+        </button>
         
-        // Mobile menu toggle with animation
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.querySelector('.menu-icon');
+        <!-- Cookie Consent Banner -->
+        <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 px-6 z-50 hidden">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-start">
+                    <i class="fas fa-cookie-bite text-primary text-xl mr-3 mt-1"></i>
+                    <p class="text-sm text-gray-700">
+                        We use cookies to enhance your experience on our website. By continuing to use this site, you consent to our use of cookies.
+                        <a href="#" class="text-primary hover-underline">Learn more</a>
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <button id="acceptCookies" class="bg-primary text-white px-4 py-2 rounded text-sm font-medium hover:bg-secondary transition duration-300">
+                        Accept All
+                    </button>
+                    <button id="declineCookies" class="bg-gray-200 text-gray-700 px-4 py-2 rounded text-sm font-medium hover:bg-gray-300 transition duration-300">
+                        Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- AOS (Animate On Scroll) JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIcon.classList.toggle('open');
-            
-            if (!mobileMenu.classList.contains('hidden')) {
-                // Add animation class after displaying the menu
-                setTimeout(() => {
-                    mobileMenu.classList.add('show');
-                }, 10);
-            } else {
-                mobileMenu.classList.remove('show');
-            }
-        });
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         
-        // Mobile dropdown toggle
-        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown > button');
-        mobileDropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function() {
-                const submenu = this.nextElementSibling;
-                const icon = this.querySelector('i');
-                
-                submenu.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
+        <!-- Custom JavaScript -->
+        <script>
+            // Preloader
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                    setTimeout(function() {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }, 800);
             });
-        });
-        
-        // Set active nav link based on current page
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentLocation = window.location.pathname;
-            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Initialize AOS with enhanced settings
+            AOS.init({
+                duration: 1000,
+                once: false,
+                offset: 100,
+                easing: 'ease-in-out',
+                mirror: true,
+                delay: 100
+            });
+
+            // Counter animation
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // The lower the value, the faster the animation
+
+            function runCounters() {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = Math.ceil(target / speed);
+                    
+                    if (count < target) {
+                        counter.innerText = Math.min(count + increment, target);
+                        setTimeout(() => runCounters(), 30);
+                    }
+                });
+            }
+
+            // Initialize counters when they come into view
+            const statsSection = document.querySelector('.counter').closest('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        runCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
             
-            navLinks.forEach(link => {
-                const linkPath = link.getAttribute('href');
-                if (currentLocation.includes(linkPath) && linkPath !== '#home') {
-                    link.classList.add('active');
-                } else if (currentLocation === '/' && linkPath === '#home') {
-                    link.classList.add('active');
+            observer.observe(statsSection);
+
+            // Client Logo Carousel
+            const clientLogos = new Swiper('.client-logos', {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                    },
+                },
+            });
+
+            // Testimonials Slider
+            const testimonialsSlider = new Swiper('.testimonials-slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
                 }
             });
-        });
-    </script>
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Cookie Consent
+            document.addEventListener('DOMContentLoaded', function() {
+                const cookieConsent = document.getElementById('cookieConsent');
+                const acceptCookies = document.getElementById('acceptCookies');
+                const declineCookies = document.getElementById('declineCookies');
+                
+                // Check if user has already made a choice
+                if (!localStorage.getItem('cookieConsent')) {
+                    setTimeout(() => {
+                        cookieConsent.classList.remove('hidden');
+                    }, 2000);
+                }
+                
+                acceptCookies.addEventListener('click', () => {
+                    localStorage.setItem('cookieConsent', 'accepted');
+                    cookieConsent.classList.add('hidden');
+                });
+                
+                declineCookies.addEventListener('click', () => {
+                    localStorage.setItem('cookieConsent', 'declined');
+                    cookieConsent.classList.add('hidden');
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-xl', 'bg-white/95', 'backdrop-blur-sm');
+                    navbar.classList.remove('bg-white');
+                } else {
+                    navbar.classList.add('bg-white');
+                    navbar.classList.remove('shadow-xl', 'bg-white/95', 'backdrop-blur-sm');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Project Data for Modals
+            const projectData = {
+                ecommerce: {
+                    title: 'ShopMax E-Commerce Platform',
+                    subtitle: 'Complete E-Commerce Solution with Admin Dashboard',
+                    category: 'Web Development',
+                    year: '2024',
+                    client: 'RetailCorp Inc.',
+                    duration: '6 months',
+                    team: '8 developers',
+                    status: 'Live & Growing',
+                    heroImage: 'https://via.placeholder.com/800x400/3B82F6/ffffff?text=ShopMax+E-Commerce',
+                    demoVideo: {
+                        type: 'youtube',
+                        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                        description: 'See how ShopMax transforms the online shopping experience with its intuitive interface and powerful features'
+                    },
+                    description: 'A comprehensive e-commerce platform built for a leading retail company, featuring a modern user interface, robust admin dashboard, and advanced analytics.',
+                    problem: 'The client needed a scalable e-commerce solution that could handle high traffic volumes while providing excellent user experience and comprehensive inventory management.',
+                    solution: 'We developed a modern, responsive e-commerce platform using React.js and Node.js with microservices architecture, implementing advanced features like real-time inventory tracking, AI-powered recommendations, and comprehensive analytics.',
+                    features: [
+                        'Responsive design optimized for all devices',
+                        'Real-time inventory management system',
+                        'AI-powered product recommendations',
+                        'Advanced search and filtering capabilities',
+                        'Secure payment gateway integration',
+                        'Comprehensive admin dashboard with analytics',
+                        'Multi-vendor marketplace support',
+                        'Customer review and rating system'
+                    ],
+                    techStack: ['React.js', 'Node.js', 'MongoDB', 'Express', 'Stripe API', 'AWS', 'Redis', 'Socket.io'],
+                    screenshots: [
+                        'https://via.placeholder.com/600x400/3B82F6/ffffff?text=Homepage',
+                        'https://via.placeholder.com/600x400/1E40AF/ffffff?text=Product+Page',
+                        'https://via.placeholder.com/600x400/F59E0B/ffffff?text=Admin+Dashboard',
+                        'https://via.placeholder.com/600x400/10B981/ffffff?text=Checkout+Process'
+                    ],
+                    results: [
+                        '150% increase in online sales',
+                        '40% improvement in conversion rate',
+                        '60% reduction in cart abandonment',
+                        '99.9% uptime since launch'
+                    ],
+                    testimonial: {
+                        text: "Zevenz delivered an exceptional e-commerce platform that exceeded our expectations. The performance improvements and user experience have significantly boosted our online sales.",
+                        author: "Sarah Johnson",
+                        position: "CEO, RetailCorp Inc."
+                    }
+                },
+                fitness: {
+                    title: 'FitTracker Pro',
+                    subtitle: 'Complete Fitness Tracking Mobile Application',
+                    category: 'Mobile App Development',
+                    year: '2024',
+                    client: 'FitLife Studios',
+                    duration: '4 months',
+                    team: '5 developers',
+                    status: 'Live on App Stores',
+                    heroImage: 'https://via.placeholder.com/800x400/10B981/ffffff?text=FitTracker+Pro',
+                    demoVideo: {
+                        type: 'html5',
+                        url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+                        poster: 'https://via.placeholder.com/800x400/10B981/ffffff?text=FitTracker+Demo',
+                        description: 'Watch how FitTracker Pro helps users achieve their fitness goals with personalized workouts and progress tracking'
+                    },
+                    description: 'A comprehensive fitness tracking mobile application that helps users monitor their workouts, track progress, and achieve their fitness goals with personalized recommendations.',
+                    problem: 'Users needed a comprehensive fitness tracking solution that could monitor various types of workouts, provide personalized recommendations, and integrate with wearable devices.',
+                    solution: 'We developed a cross-platform mobile app using React Native that integrates with popular fitness trackers, provides AI-powered workout recommendations, and includes social features for motivation.',
+                    features: [
+                        'Workout tracking and planning',
+                        'Integration with fitness wearables',
+                        'Personalized workout recommendations',
+                        'Progress tracking and analytics',
+                        'Social features and challenges',
+                        'Nutrition tracking and meal planning'
+                    ],
+                    techStack: ['React Native', 'Firebase', 'Node.js', 'Google Fit API', 'Apple HealthKit', 'TensorFlow'],
+                    screenshots: [
+                        'https://via.placeholder.com/300x600/10B981/ffffff?text=Home+Screen',
+                        'https://via.placeholder.com/300x600/059669/ffffff?text=Workout+Tracking',
+                        'https://via.placeholder.com/300x600/047857/ffffff?text=Progress+Analytics',
+                        'https://via.placeholder.com/300x600/065F46/ffffff?text=Social+Features'
+                    ],
+                    results: [
+                        '50K+ app downloads in first month',
+                        '4.8/5 star rating on app stores',
+                        '85% user retention rate',
+                        'Featured in "Best Fitness Apps" lists'
+                    ],
+                    testimonial: {
+                        text: "The FitTracker Pro app has revolutionized how our clients track their fitness journey. The integration with wearables and personalized recommendations are game-changers.",
+                        author: "Mike Rodriguez",
+                        position: "Founder, FitLife Studios"
+                    }
+                },
+                analytics: {
+                    title: 'InsightPro Analytics Dashboard',
+                    subtitle: 'Advanced Business Intelligence Platform',
+                    category: 'Data Science',
+                    year: '2024',
+                    client: 'DataDriven Corp',
+                    duration: '5 months',
+                    team: '6 specialists',
+                    status: 'Live & Scaling',
+                    heroImage: 'https://via.placeholder.com/800x400/8B5CF6/ffffff?text=InsightPro+Analytics',
+                    demoVideo: {
+                        type: 'youtube',
+                        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                        description: 'Discover how InsightPro transforms complex data into actionable business insights with interactive visualizations'
+                    },
+                    description: 'A comprehensive business intelligence platform that transforms raw data into actionable insights through advanced analytics and interactive visualizations.',
+                    problem: 'The client struggled with data scattered across multiple systems and needed a unified platform to gain meaningful insights for strategic decision-making.',
+                    solution: 'We built a comprehensive analytics platform using Python and modern data visualization libraries, implementing machine learning algorithms for predictive analytics and automated reporting.',
+                    features: [
+                        'Real-time data visualization dashboards',
+                        'Predictive analytics and forecasting',
+                        'Custom report generation',
+                        'Data source integration (APIs, databases)',
+                        'Interactive charts and graphs',
+                        'Automated alert system',
+                        'Role-based access control',
+                        'Export and sharing capabilities',
+                        'Mobile-responsive design',
+                        'Advanced filtering and drill-down capabilities'
+                    ],
+                    techStack: ['Python', 'Django', 'D3.js', 'PostgreSQL', 'Apache Spark', 'TensorFlow', 'Redis', 'Docker'],
+                    screenshots: [
+                        'https://via.placeholder.com/600x400/8B5CF6/ffffff?text=Main+Dashboard',
+                        'https://via.placeholder.com/600x400/7C3AED/ffffff?text=Analytics+View',
+                        'https://via.placeholder.com/600x400/6D28D9/ffffff?text=Reports+Section',
+                        'https://via.placeholder.com/600x400/5B21B6/ffffff?text=Data+Sources'
+                    ],
+                    results: [
+                        '70% faster decision-making process',
+                        '45% improvement in forecast accuracy',
+                        '80% reduction in manual reporting time',
+                        '300% ROI within first year'
+                    ],
+                    testimonial: {
+                        text: "InsightPro has transformed how we analyze our business data. The predictive analytics capabilities have given us a significant competitive advantage.",
+                        author: "Dr. Lisa Chen",
+                        position: "Chief Data Officer, DataDriven Corp"
+                    }
+                }
+            };
+
+            // Modal Functions
+            function openProjectModal(projectId) {
+                const project = projectData[projectId];
+                if (!project) return;
+
+                const modal = document.getElementById('projectModal');
+                const modalContent = document.getElementById('modalContent');
+
+                // Generate modal content
+                modalContent.innerHTML = `
+                    <!-- Hero Section -->
+                    <div class="relative mb-8">
+                        <img src="${project.heroImage}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h1 class="text-4xl font-bold mb-2">${project.title}</h1>
+                                <p class="text-xl">${project.subtitle}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Overview -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                        <div class="lg:col-span-2">
+                            <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                            <p class="text-gray-600 mb-6">${project.description}</p>
+                            
+                            <h3 class="text-xl font-semibold mb-3">The Challenge</h3>
+                            <p class="text-gray-600 mb-6">${project.problem}</p>
+                            
+                            <h3 class="text-xl font-semibold mb-3">Our Solution</h3>
+                            <p class="text-gray-600">${project.solution}</p>
+                        </div>
+                        
+                        <div class="bg-light p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="font-medium text-gray-700">Client:</span>
+                                    <span class="text-gray-600">${project.client}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium text-gray-700">Category:</span>
+                                    <span class="text-gray-600">${project.category}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium text-gray-700">Duration:</span>
+                                    <span class="text-gray-600">${project.duration}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium text-gray-700">Team Size:</span>
+                                    <span class="text-gray-600">${project.team}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium text-gray-700">Status:</span>
+                                    <span class="text-green-600 font-semibold">${project.status}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Video Section -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Demo Video</h2>
+                        <div class="relative rounded-lg overflow-hidden shadow-lg">
+                            ${project.demoVideo.type === 'youtube' ? `
+                                <div class="relative pb-56.25 h-0">
+                                    <iframe 
+                                        src="${project.demoVideo.url}" 
+                                        class="absolute top-0 left-0 w-full h-full"
+                                        frameborder="0" 
+                                        allowfullscreen
+                                        title="${project.title} Demo Video">
+                                    </iframe>
+                                </div>
+                            ` : `
+                                <video 
+                                    class="w-full h-auto rounded-lg" 
+                                    controls 
+                                    poster="${project.demoVideo.poster || ''}"
+                                    preload="metadata">
+                                    <source src="${project.demoVideo.url}" type="video/mp4">
+                                    ${project.demoVideo.webm ? `<source src="${project.demoVideo.webm}" type="video/webm">` : ''}
+                                    Your browser does not support the video tag.
+                                </video>
+                            `}
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">
+                            ${project.demoVideo.description || `Watch the demo to see ${project.title} in action`}
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${project.features.map(feature => `
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                        <i class="fas fa-check text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-600">${feature}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Technology Stack -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Technology Stack</h2>
+                        <div class="flex flex-wrap gap-3">
+                            ${project.techStack.map(tech => `
+                                <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">${tech}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Screenshots -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Screenshots</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${project.screenshots.map((screenshot, index) => `
+                                <img src="${screenshot}" alt="Screenshot ${index + 1}" class="w-full h-48 object-cover rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Results & Impact</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${project.results.map(result => `
+                                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                    <div class="flex items-center">
+                                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fas fa-chart-line text-white text-sm"></i>
+                                        </div>
+                                        <span class="font-semibold text-green-800">${result}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Client Testimonial</h2>
+                        <div class="bg-light p-6 rounded-lg">
+                            <div class="flex mb-4">
+                                ${[...Array(5)].map(() => '<i class="fas fa-star text-yellow-400"></i>').join('')}
+                            </div>
+                            <blockquote class="text-lg text-gray-600 italic mb-4">"${project.testimonial.text}"</blockquote>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                    ${project.testimonial.author.charAt(0)}
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-dark">${project.testimonial.author}</div>
+                                    <div class="text-gray-600">${project.testimonial.position}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
+                        <p class="text-xl mb-6">Let's discuss how we can bring your ideas to life with innovative solutions.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="pages/contact.html" class="bg-accent text-dark px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300">
+                                Get Started
+                            </a>
+                            <button onclick="closeProjectModal()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                                View More Projects
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                // Show modal
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeProjectModal() {
+                const modal = document.getElementById('projectModal');
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Close modal when clicking outside
+            document.getElementById('projectModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeProjectModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeProjectModal();
+                }
+            });
+        </script>
+        
+        <!-- Navigation enhancement scripts -->
+        <script>
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('navbar-sticky');
+                } else {
+                    navbar.classList.remove('navbar-sticky');
+                }
+            });
+            
+            // Mobile menu toggle with animation
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.querySelector('.menu-icon');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('open');
+                
+                if (!mobileMenu.classList.contains('hidden')) {
+                    // Add animation class after displaying the menu
+                    setTimeout(() => {
+                        mobileMenu.classList.add('show');
+                    }, 10);
+                } else {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+            
+            // Mobile dropdown toggle
+            const mobileDropdowns = document.querySelectorAll('.mobile-dropdown > button');
+            mobileDropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    submenu.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+            
+            // Set active nav link based on current page
+            document.addEventListener('DOMContentLoaded', function() {
+                const currentLocation = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                navLinks.forEach(link => {
+                    const linkPath = link.getAttribute('href');
+                    if (currentLocation.includes(linkPath) && linkPath !== '#home') {
+                        link.classList.add('active');
+                    } else if (currentLocation === '/' && linkPath === '#home') {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </div>
 </body>
 </html>
